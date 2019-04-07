@@ -8,3 +8,4 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.csproj.CoreCompileInputs.cache
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.exe
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.pdb
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.Principal.resources

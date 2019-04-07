@@ -16,6 +16,7 @@ namespace ClienteIntellectus
         {
             InitializeComponent();
             this.CenterToScreen();
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
