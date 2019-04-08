@@ -46,9 +46,12 @@ namespace ClienteIntellectus.Views
             if(loginPresentador.ValidarUsuario())
             {
 
-                Principal principal = new Principal();
-                this.Hide();
-                principal.Show();
+                if (loginPresentador.ConectarseAlServidor())
+                {
+                    Principal principal = new Principal();
+                    this.Hide();
+                    principal.Show();
+                }
             }
 
             btnEntrar.Enabled = true;
