@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IntellectusMensajes">
+      <HintPath>..\..\..\IntellectusServer\ServerIntellectus\IntellectusMensajes\bin\Debug\netstandard2.0\IntellectusMensajes.dll</HintPath>
+    </Reference>
+    <Reference Include="IntellectusSocketIO">
+      <HintPath>..\..\..\IntellectusServer\ServerIntellectus\IntellectusSocketIO\bin\Debug\netstandard2.0\IntellectusSocketIO.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\UsuarioServicios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Presentador\LoginPresentador.cs" />
+    <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +90,25 @@
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices.wsdl" />
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +121,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\UsuarioServicios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioServicios\UsuarioServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioServicios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioServicios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UsuarioServicios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

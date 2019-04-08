@@ -16,7 +16,7 @@ namespace ClienteIntellectus
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.Principal());
+            Application.Run(new Views.Login());
         }
     }
 }
