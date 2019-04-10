@@ -61,5 +61,12 @@ namespace ClienteIntellectus.Views
         {
             MessageBox.Show(mensaje);
         }
+
+        private void btnRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registro registro = new Registro(this);
+            registro.Show();
+            this.Hide();
+        }
     }
 }

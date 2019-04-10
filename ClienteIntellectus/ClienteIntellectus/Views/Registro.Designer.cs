@@ -1,6 +1,6 @@
 ﻿namespace ClienteIntellectus.Views
 {
-    partial class Login
+    partial class Registro
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.panelTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCenter = new System.Windows.Forms.Panel();
-            this.btnRegistrarse = new System.Windows.Forms.LinkLabel();
-            this.checkBoxAutoLogin = new System.Windows.Forms.CheckBox();
-            this.checkBoxRecordarPassword = new System.Windows.Forms.CheckBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNick = new System.Windows.Forms.TextBox();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -107,10 +109,12 @@
             // panelCenter
             // 
             this.panelCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.panelCenter.Controls.Add(this.btnCancelar);
+            this.panelCenter.Controls.Add(this.label4);
+            this.panelCenter.Controls.Add(this.txtConfirmarPassword);
+            this.panelCenter.Controls.Add(this.label3);
+            this.panelCenter.Controls.Add(this.txtNick);
             this.panelCenter.Controls.Add(this.btnRegistrarse);
-            this.panelCenter.Controls.Add(this.checkBoxAutoLogin);
-            this.panelCenter.Controls.Add(this.checkBoxRecordarPassword);
-            this.panelCenter.Controls.Add(this.btnEntrar);
             this.panelCenter.Controls.Add(this.label2);
             this.panelCenter.Controls.Add(this.label1);
             this.panelCenter.Controls.Add(this.txtPassword);
@@ -118,61 +122,80 @@
             this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCenter.Location = new System.Drawing.Point(0, 212);
             this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(340, 257);
+            this.panelCenter.Size = new System.Drawing.Size(340, 321);
             this.panelCenter.TabIndex = 1;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Location = new System.Drawing.Point(38, 274);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(128, 35);
+            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(101, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Confirmar password";
+            // 
+            // txtConfirmarPassword
+            // 
+            this.txtConfirmarPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConfirmarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarPassword.Location = new System.Drawing.Point(12, 232);
+            this.txtConfirmarPassword.Name = "txtConfirmarPassword";
+            this.txtConfirmarPassword.PasswordChar = '*';
+            this.txtConfirmarPassword.Size = new System.Drawing.Size(315, 31);
+            this.txtConfirmarPassword.TabIndex = 7;
+            this.txtConfirmarPassword.UseSystemPasswordChar = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(152, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Nick";
+            // 
+            // txtNick
+            // 
+            this.txtNick.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNick.Location = new System.Drawing.Point(13, 98);
+            this.txtNick.Name = "txtNick";
+            this.txtNick.PasswordChar = '*';
+            this.txtNick.Size = new System.Drawing.Size(315, 31);
+            this.txtNick.TabIndex = 5;
+            this.txtNick.UseSystemPasswordChar = true;
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.AutoSize = true;
-            this.btnRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarse.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(125)))), ((int)(((byte)(115)))));
-            this.btnRegistrarse.Location = new System.Drawing.Point(223, 214);
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarse.Location = new System.Drawing.Point(172, 274);
             this.btnRegistrarse.Name = "btnRegistrarse";
-            this.btnRegistrarse.Size = new System.Drawing.Size(110, 25);
-            this.btnRegistrarse.TabIndex = 7;
-            this.btnRegistrarse.TabStop = true;
+            this.btnRegistrarse.Size = new System.Drawing.Size(128, 35);
+            this.btnRegistrarse.TabIndex = 4;
             this.btnRegistrarse.Text = "Registrarse";
-            this.btnRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnRegistrarse_LinkClicked);
-            // 
-            // checkBoxAutoLogin
-            // 
-            this.checkBoxAutoLogin.AutoSize = true;
-            this.checkBoxAutoLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(125)))), ((int)(((byte)(115)))));
-            this.checkBoxAutoLogin.Location = new System.Drawing.Point(101, 215);
-            this.checkBoxAutoLogin.Name = "checkBoxAutoLogin";
-            this.checkBoxAutoLogin.Size = new System.Drawing.Size(77, 17);
-            this.checkBoxAutoLogin.TabIndex = 6;
-            this.checkBoxAutoLogin.Text = "Auto Login";
-            this.checkBoxAutoLogin.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRecordarPassword
-            // 
-            this.checkBoxRecordarPassword.AutoSize = true;
-            this.checkBoxRecordarPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(125)))), ((int)(((byte)(115)))));
-            this.checkBoxRecordarPassword.Location = new System.Drawing.Point(101, 191);
-            this.checkBoxRecordarPassword.Name = "checkBoxRecordarPassword";
-            this.checkBoxRecordarPassword.Size = new System.Drawing.Size(119, 17);
-            this.checkBoxRecordarPassword.TabIndex = 5;
-            this.checkBoxRecordarPassword.Text = "Recordar Password";
-            this.checkBoxRecordarPassword.UseVisualStyleBackColor = true;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEntrar.Location = new System.Drawing.Point(101, 149);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(128, 35);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(133, 88);
+            this.label2.Location = new System.Drawing.Point(134, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 3;
@@ -182,7 +205,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 21);
+            this.label1.Location = new System.Drawing.Point(146, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 2;
@@ -192,7 +215,7 @@
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(13, 108);
+            this.txtPassword.Location = new System.Drawing.Point(12, 168);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(315, 31);
@@ -203,21 +226,21 @@
             // 
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(13, 42);
+            this.txtCorreo.Location = new System.Drawing.Point(13, 34);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(315, 31);
             this.txtCorreo.TabIndex = 0;
             // 
-            // Login
+            // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 469);
+            this.ClientSize = new System.Drawing.Size(340, 533);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
-            this.Text = "Intellectus - Iniciar Sesión";
+            this.Name = "Registro";
+            this.Text = "Intellectus - Registrase";
             this.panelTop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
@@ -239,12 +262,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.LinkLabel btnRegistrarse;
-        private System.Windows.Forms.CheckBox checkBoxAutoLogin;
-        private System.Windows.Forms.CheckBox checkBoxRecordarPassword;
+        private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtConfirmarPassword;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNick;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
 

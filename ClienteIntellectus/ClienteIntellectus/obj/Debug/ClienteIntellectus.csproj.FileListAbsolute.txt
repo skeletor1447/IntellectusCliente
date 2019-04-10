@@ -138,3 +138,4 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\Microsoft.Extensions.Primitives.xml
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\Rollbar.xml
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.Registro.resources
