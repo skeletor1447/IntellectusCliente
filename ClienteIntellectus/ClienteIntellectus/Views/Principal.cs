@@ -27,5 +27,15 @@ namespace ClienteIntellectus.Views
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnPrincipal_Click(object sender, EventArgs e)
+        {
+            controlUsuarioPrincipalPrincipal1.BringToFront();
+        }
+
+        private void btnAmigos_Click(object sender, EventArgs e)
+        {
+            controlUsuarioAmigosPrincipal1.BringToFront();
+        }
     }
 }

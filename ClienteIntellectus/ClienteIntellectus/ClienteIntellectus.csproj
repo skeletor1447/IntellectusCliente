@@ -63,6 +63,18 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Presentador\LoginPresentador.cs" />
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.Designer.cs">
+      <DependentUpon>ControlUsuarioPrincipalPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -87,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.resx">
+      <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.resx">
+      <DependentUpon>ControlUsuarioPrincipalPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

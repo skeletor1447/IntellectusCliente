@@ -114,3 +114,5 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\Newtonsoft.Json.xml
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.exe.config
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.csproj.CopyComplete
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal.resources
