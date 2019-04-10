@@ -35,15 +35,13 @@ namespace ClienteIntellectus.Presentador
 
                 String mensaje = JsonConvert.SerializeObject(loginPeticion);
 
-                IntellectusSocketIO.SocketIO.WriteInt(ilogin.ClienteSocket, (int)IntellectusMensajes.Paquete.LOGIN);
-                byte[] buffer = Encoding.UTF8.GetBytes(mensaje);
-                IntellectusSocketIO.SocketIO.WriteInt(ilogin.ClienteSocket, buffer.Length);
-                IntellectusSocketIO.SocketIO.Write(ilogin.ClienteSocket,buffer.Length, buffer);
-
+                IntellectusSocketIO.SocketIO.EnviarPaqueteCompleto(ilogin.ClienteSocket, (int)IntellectusMensajes.Paquete.LOGIN, mensaje);
+                
 
                 int paquete = IntellectusSocketIO.SocketIO.ReadInt(ilogin.ClienteSocket);
-                int longitud = IntellectusSocketIO.SocketIO.ReadInt(ilogin.ClienteSocket);
-                String mensajeRespuesta = IntellectusSocketIO.SocketIO.ReadString(ilogin.ClienteSocket, longitud);
+
+
+                String mensajeRespuesta = IntellectusSocketIO.SocketIO.ObtenerPaqueteCompleto(ilogin.ClienteSocket);
 
                 IntellectusMensajes.LoginRespuesta loginRespuesta = JsonConvert.DeserializeObject<IntellectusMensajes.LoginRespuesta>(mensajeRespuesta);
 
