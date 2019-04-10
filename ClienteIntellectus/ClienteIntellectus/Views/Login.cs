@@ -48,7 +48,7 @@ namespace ClienteIntellectus.Views
 
                 if (loginPresentador.ConectarseAlServidor())
                 {
-                    Principal principal = new Principal();
+                    Principal principal = new Principal(ClienteSocket,ID);
                     this.Hide();
                     principal.Show();
                 }
