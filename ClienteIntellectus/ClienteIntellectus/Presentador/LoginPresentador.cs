@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Rollbar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ClienteIntellectus.Presentador
 {
     public class LoginPresentador
     {
+
         Views.ILogin ilogin;
 
         public LoginPresentador(Views.ILogin ilogin)
@@ -72,6 +74,7 @@ namespace ClienteIntellectus.Presentador
 
         public bool ValidarUsuario()
         {
+            
             try
             {
                 UsuarioServicios.UsuarioServicesClient usuarioServicesClient = new UsuarioServicios.UsuarioServicesClient();
@@ -96,6 +99,7 @@ namespace ClienteIntellectus.Presentador
             catch(Exception ex)
             {
                 ilogin.MostrarMensajeUsuarioError(ex.Message);
+                RollbarLocator.RollbarInstance.Critical(ex);
             }
 
             return false;
