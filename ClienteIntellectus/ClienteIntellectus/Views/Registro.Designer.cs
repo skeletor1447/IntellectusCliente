@@ -132,7 +132,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(38, 274);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 35);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -155,7 +155,7 @@
             this.txtConfirmarPassword.Name = "txtConfirmarPassword";
             this.txtConfirmarPassword.PasswordChar = '*';
             this.txtConfirmarPassword.Size = new System.Drawing.Size(315, 31);
-            this.txtConfirmarPassword.TabIndex = 7;
+            this.txtConfirmarPassword.TabIndex = 3;
             this.txtConfirmarPassword.UseSystemPasswordChar = true;
             // 
             // label3
@@ -174,10 +174,8 @@
             this.txtNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNick.Location = new System.Drawing.Point(13, 98);
             this.txtNick.Name = "txtNick";
-            this.txtNick.PasswordChar = '*';
             this.txtNick.Size = new System.Drawing.Size(315, 31);
-            this.txtNick.TabIndex = 5;
-            this.txtNick.UseSystemPasswordChar = true;
+            this.txtNick.TabIndex = 1;
             // 
             // btnRegistrarse
             // 
@@ -219,7 +217,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(315, 31);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtCorreo

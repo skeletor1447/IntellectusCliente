@@ -13,7 +13,7 @@ namespace ClienteIntellectus.Views
 {
     public partial class Registro : Form, IRegistro
     {
-        Login padre;
+        public Login padre;
 
         public string Correo { get; set ; }
         public string Nick { get; set; }
@@ -58,7 +58,7 @@ namespace ClienteIntellectus.Views
 
             if(registroPresentador.ValidarRegistro())
             {
-
+                registroPresentador.RegistrarUsuario();
             }
 
             btnRegistrarse.Enabled = true;

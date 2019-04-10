@@ -158,6 +158,9 @@
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.InsertarRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -14,6 +14,30 @@ namespace ClienteIntellectus.Presentador
             this.iregistro = iregistro;
         }
 
+        public void RegistrarUsuario()
+        {
+            try
+            {
+                UsuarioServicios.UsuarioServicesClient usuarioServicesClient = new UsuarioServicios.UsuarioServicesClient();
+                UsuarioServicios.InsertarRespuesta respuesta = usuarioServicesClient.Registrar(new UsuarioServicios.Usuario() { Correo = iregistro.Correo, ID = -1, Nick = iregistro.Nick, Password = iregistro.Password });
+
+                if (!respuesta.Error)
+                {
+                    iregistro.MostrarMensajeUsuarioError("Usuario registrado correctamente");
+                    (iregistro as Views.Registro).Hide();
+                    (iregistro as Views.Registro).padre.Show();
+
+                }
+                else
+                {
+                    iregistro.MostrarMensajeUsuarioError(respuesta.Errores["Error"]);
+                }
+            }
+            catch(Exception ex)
+            {
+                iregistro.MostrarMensajeUsuarioError(ex.Message);
+            }
+        }
         public bool ValidarRegistro()
         {
             bool valido = false;

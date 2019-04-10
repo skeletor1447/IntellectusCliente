@@ -108,6 +108,9 @@ namespace ClienteIntellectus.UsuarioServicios {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NickField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -157,6 +160,96 @@ namespace ClienteIntellectus.UsuarioServicios {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InsertarRespuesta", Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria")]
+    [System.SerializableAttribute()]
+    public partial class InsertarRespuesta : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ErroresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Error {
+            get {
+                return this.ErrorField;
+            }
+            set {
+                if ((this.ErrorField.Equals(value) != true)) {
+                    this.ErrorField = value;
+                    this.RaisePropertyChanged("Error");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<string, string> Errores {
+            get {
+                return this.ErroresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErroresField, value) != true)) {
+                    this.ErroresField = value;
+                    this.RaisePropertyChanged("Errores");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -176,6 +269,12 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPasswordResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarPorCorreoYPasswordAsync(string correo, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Registrar", ReplyAction="http://tempuri.org/IUsuarioServices/RegistrarResponse")]
+        ClienteIntellectus.UsuarioServicios.InsertarRespuesta Registrar(ClienteIntellectus.UsuarioServicios.Usuario usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Registrar", ReplyAction="http://tempuri.org/IUsuarioServices/RegistrarResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.InsertarRespuesta> RegistrarAsync(ClienteIntellectus.UsuarioServicios.Usuario usuario);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -211,6 +310,14 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarPorCorreoYPasswordAsync(string correo, string password) {
             return base.Channel.ConsultarPorCorreoYPasswordAsync(correo, password);
+        }
+        
+        public ClienteIntellectus.UsuarioServicios.InsertarRespuesta Registrar(ClienteIntellectus.UsuarioServicios.Usuario usuario) {
+            return base.Channel.Registrar(usuario);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.InsertarRespuesta> RegistrarAsync(ClienteIntellectus.UsuarioServicios.Usuario usuario) {
+            return base.Channel.RegistrarAsync(usuario);
         }
     }
 }
