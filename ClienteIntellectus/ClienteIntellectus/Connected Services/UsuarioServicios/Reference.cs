@@ -275,6 +275,12 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Registrar", ReplyAction="http://tempuri.org/IUsuarioServices/RegistrarResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.InsertarRespuesta> RegistrarAsync(ClienteIntellectus.UsuarioServicios.Usuario usuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Consultar", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarResponse")]
+        ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 Consultar(long id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Consultar", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarAsync(long id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -318,6 +324,14 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.InsertarRespuesta> RegistrarAsync(ClienteIntellectus.UsuarioServicios.Usuario usuario) {
             return base.Channel.RegistrarAsync(usuario);
+        }
+        
+        public ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 Consultar(long id) {
+            return base.Channel.Consultar(id);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarAsync(long id) {
+            return base.Channel.ConsultarAsync(id);
         }
     }
 }

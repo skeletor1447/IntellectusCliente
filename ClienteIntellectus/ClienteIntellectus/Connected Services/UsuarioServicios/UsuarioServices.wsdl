@@ -21,6 +21,12 @@
   <wsdl:message name="IUsuarioServices_Registrar_OutputMessage">
     <wsdl:part name="parameters" element="tns:RegistrarResponse" />
   </wsdl:message>
+  <wsdl:message name="IUsuarioServices_Consultar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioServices_Consultar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUsuarioServices">
     <wsdl:operation name="ConsultarPorCorreoYPassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword" message="tns:IUsuarioServices_ConsultarPorCorreoYPassword_InputMessage" />
@@ -29,6 +35,10 @@
     <wsdl:operation name="Registrar">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/Registrar" message="tns:IUsuarioServices_Registrar_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/RegistrarResponse" message="tns:IUsuarioServices_Registrar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/Consultar" message="tns:IUsuarioServices_Consultar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarResponse" message="tns:IUsuarioServices_Consultar_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuarioServices" type="tns:IUsuarioServices">
@@ -44,6 +54,15 @@
     </wsdl:operation>
     <wsdl:operation name="Registrar">
       <soap:operation soapAction="http://tempuri.org/IUsuarioServices/Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioServices/Consultar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

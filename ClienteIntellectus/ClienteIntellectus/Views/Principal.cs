@@ -14,13 +14,51 @@ namespace ClienteIntellectus.Views
     public partial class Principal : Form
     {
         private Socket ClienteSocket { get; set; }
+        UsuarioServicios.Usuario usuario;
         private long ID { get; set; }
+        UsuarioServicios.UsuarioServicesClient usuarioClient;
         public Principal(Socket clienteSocket,long ID)
         {
             InitializeComponent();
             this.ClienteSocket = clienteSocket;
             this.ID = ID;
-            btnPerfil.Text = "emilio.montielemiliomontielemiliomontiel@hotmail.com";
+
+            try
+            {
+                usuarioClient = new UsuarioServicios.UsuarioServicesClient();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            CargarPerfil();
+            
+        }
+
+
+        private void CargarPerfil()
+        {
+            try
+            {
+                UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 resultado = usuarioClient.Consultar(ID);
+
+                if (!resultado.Error)
+                {
+                    usuario = resultado.Entidad;
+
+
+                    btnPerfil.Text = usuario.Nick;
+                }
+                else
+                {
+                    MessageBox.Show(resultado.Errores["Error"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
