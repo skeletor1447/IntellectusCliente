@@ -25,4 +25,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="InsertarRespuesta" nillable="true" type="tns:InsertarRespuesta" />
+  <xs:complexType name="MultipleRespuestaOfUsuarioqYdlCAL1">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="MultipleRespuestaOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Usuario" Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Entidades" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFIntellectus.Entidades" minOccurs="0" name="Entidades" nillable="true" type="q4:ArrayOfUsuario" />
+      <xs:element minOccurs="0" name="Error" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errores" nillable="true" type="q5:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultipleRespuestaOfUsuarioqYdlCAL1" nillable="true" type="tns:MultipleRespuestaOfUsuarioqYdlCAL1" />
 </xs:schema>

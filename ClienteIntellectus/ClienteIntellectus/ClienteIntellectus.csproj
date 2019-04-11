@@ -93,6 +93,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AmigosServicios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UsuarioServicios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,7 +190,26 @@
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\AmigosServicios\AmigosServices.wsdl" />
+    <None Include="Connected Services\AmigosServicios\AmigosServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AmigosServicios\AmigosServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AmigosServicios\AmigosServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AmigosServicios\AmigosServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AmigosServicios\ClienteIntellectus.AmigosServicios.InsertarRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.InsertarRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1.datasource">
@@ -225,6 +249,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AmigosServicios\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioServicios\" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +267,20 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\AmigosServicios\AmigosServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AmigosServicios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AmigosServicios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AmigosServicios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

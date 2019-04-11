@@ -15,13 +15,13 @@ namespace ClienteIntellectus.Views
     {
         private Socket ClienteSocket { get; set; }
         UsuarioServicios.Usuario usuario;
-        private long ID { get; set; }
+        public static  long ID { get; set; }
         UsuarioServicios.UsuarioServicesClient usuarioClient;
         public Principal(Socket clienteSocket,long ID)
         {
             InitializeComponent();
             this.ClienteSocket = clienteSocket;
-            this.ID = ID;
+            Principal.ID = ID;
 
             try
             {

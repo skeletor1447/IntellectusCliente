@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d57b8ef4-1119-4643-bb22-a689aed9f24f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56251/Services/AmigosServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AmigosServices.xsd" MetadataType="Schema" ID="fde4c7a0-252a-4e4a-8417-d7f3750f8bd3" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="AmigosServices.wsdl" MetadataType="Wsdl" ID="cd728c79-2233-452b-a99a-ce3b564c4591" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?wsdl" />
+    <MetadataFile FileName="AmigosServices1.xsd" MetadataType="Schema" ID="80421518-3842-4aa8-8cd2-3d3ce472f688" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="AmigosServices2.xsd" MetadataType="Schema" ID="6f7c278b-e1b6-47e3-9743-1fce8f6c2143" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="AmigosServices.disco" MetadataType="Disco" ID="fcf1de97-aef2-4b6b-9fe6-27f8ec5c0847" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?disco" />
+    <MetadataFile FileName="AmigosServices3.xsd" MetadataType="Schema" ID="53e3a3a0-7b1c-43a9-91fe-406877d31910" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

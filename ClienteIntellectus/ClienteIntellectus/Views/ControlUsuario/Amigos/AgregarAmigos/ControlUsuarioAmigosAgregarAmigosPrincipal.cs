@@ -16,15 +16,39 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos
         {
             InitializeComponent();
 
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
-            flowLayoutPanel1.Controls.Add(new ControlUsuarioAmigosTarjetaSolicitud());
+            
         }
 
+        private void txtBuscarAlumno_TextChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            if (txtBuscarAlumno.Text.Trim() == String.Empty)
+                return;
+            
+            try
+            {
+                UsuarioServicios.UsuarioServicesClient usuarioServices = new UsuarioServicios.UsuarioServicesClient();
+
+                UsuarioServicios.MultipleRespuestaOfUsuarioqYdlCAL1 respuesta = usuarioServices.ConsultarPorBusqueda(txtBuscarAlumno.Text);
+
+                if(!respuesta.Error)
+                {
+                    foreach (var usuario in respuesta.Entidades)
+                    {
+                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario.Nick,usuario.ID);
+                        
+                        
+                        flowLayoutPanel1.Controls.Add(cuats);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
     }
 }
