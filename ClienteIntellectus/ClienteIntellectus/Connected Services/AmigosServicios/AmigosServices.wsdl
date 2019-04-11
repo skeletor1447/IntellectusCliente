@@ -6,6 +6,7 @@
       <xsd:import schemaLocation="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" />
       <xsd:import schemaLocation="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Entidades" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAmigosServices_SolicitudDeAmistad_InputMessage">
@@ -14,16 +15,35 @@
   <wsdl:message name="IAmigosServices_SolicitudDeAmistad_OutputMessage">
     <wsdl:part name="parameters" element="tns:SolicitudDeAmistadResponse" />
   </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarSolicitudesEnviadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesEnviadas" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarSolicitudesEnviadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesEnviadasResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAmigosServices">
     <wsdl:operation name="SolicitudDeAmistad">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistad" message="tns:IAmigosServices_SolicitudDeAmistad_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistadResponse" message="tns:IAmigosServices_SolicitudDeAmistad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesEnviadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas" message="tns:IAmigosServices_ConsultarSolicitudesEnviadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadasResponse" message="tns:IAmigosServices_ConsultarSolicitudesEnviadas_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAmigosServices" type="tns:IAmigosServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="SolicitudDeAmistad">
       <soap:operation soapAction="http://tempuri.org/IAmigosServices/SolicitudDeAmistad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesEnviadas">
+      <soap:operation soapAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

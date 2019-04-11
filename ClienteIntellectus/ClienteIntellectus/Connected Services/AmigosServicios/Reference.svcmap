@@ -22,6 +22,7 @@
     <MetadataSource Address="http://localhost:56251/Services/AmigosServices.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="AmigosServices4.xsd" MetadataType="Schema" ID="b88816c3-52fa-478a-9c72-9f79e9db5ae5" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd4" />
     <MetadataFile FileName="AmigosServices.xsd" MetadataType="Schema" ID="fde4c7a0-252a-4e4a-8417-d7f3750f8bd3" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd0" />
     <MetadataFile FileName="AmigosServices.wsdl" MetadataType="Wsdl" ID="cd728c79-2233-452b-a99a-ce3b564c4591" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?wsdl" />
     <MetadataFile FileName="AmigosServices1.xsd" MetadataType="Schema" ID="80421518-3842-4aa8-8cd2-3d3ce472f688" SourceId="1" SourceUrl="http://localhost:56251/Services/AmigosServices.svc?xsd=xsd1" />

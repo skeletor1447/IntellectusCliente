@@ -90,6 +90,160 @@ namespace ClienteIntellectus.AmigosServicios {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MultipleRespuestaOfSolicitudAmistadqYdlCAL1", Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria")]
+    [System.SerializableAttribute()]
+    public partial class MultipleRespuestaOfSolicitudAmistadqYdlCAL1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ClienteIntellectus.AmigosServicios.SolicitudAmistad[] EntidadesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ErroresField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ClienteIntellectus.AmigosServicios.SolicitudAmistad[] Entidades {
+            get {
+                return this.EntidadesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntidadesField, value) != true)) {
+                    this.EntidadesField = value;
+                    this.RaisePropertyChanged("Entidades");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Error {
+            get {
+                return this.ErrorField;
+            }
+            set {
+                if ((this.ErrorField.Equals(value) != true)) {
+                    this.ErrorField = value;
+                    this.RaisePropertyChanged("Error");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<string, string> Errores {
+            get {
+                return this.ErroresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErroresField, value) != true)) {
+                    this.ErroresField = value;
+                    this.RaisePropertyChanged("Errores");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SolicitudAmistad", Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Entidades")]
+    [System.SerializableAttribute()]
+    public partial class SolicitudAmistad : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long IdSolicitadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long IdSolicitanteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long IdSolicitudAmistadField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long IdSolicitado {
+            get {
+                return this.IdSolicitadoField;
+            }
+            set {
+                if ((this.IdSolicitadoField.Equals(value) != true)) {
+                    this.IdSolicitadoField = value;
+                    this.RaisePropertyChanged("IdSolicitado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long IdSolicitante {
+            get {
+                return this.IdSolicitanteField;
+            }
+            set {
+                if ((this.IdSolicitanteField.Equals(value) != true)) {
+                    this.IdSolicitanteField = value;
+                    this.RaisePropertyChanged("IdSolicitante");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long IdSolicitudAmistad {
+            get {
+                return this.IdSolicitudAmistadField;
+            }
+            set {
+                if ((this.IdSolicitudAmistadField.Equals(value) != true)) {
+                    this.IdSolicitudAmistadField = value;
+                    this.RaisePropertyChanged("IdSolicitudAmistad");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AmigosServicios.IAmigosServices")]
     public interface IAmigosServices {
@@ -99,6 +253,12 @@ namespace ClienteIntellectus.AmigosServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistad", ReplyAction="http://tempuri.org/IAmigosServices/SolicitudDeAmistadResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.InsertarRespuesta> SolicitudDeAmistadAsync(int solicitante, int solicitado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadasResponse")]
+        ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarSolicitudesEnviadas(int soliciante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadasResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesEnviadasAsync(int soliciante);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -134,6 +294,14 @@ namespace ClienteIntellectus.AmigosServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.InsertarRespuesta> SolicitudDeAmistadAsync(int solicitante, int solicitado) {
             return base.Channel.SolicitudDeAmistadAsync(solicitante, solicitado);
+        }
+        
+        public ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarSolicitudesEnviadas(int soliciante) {
+            return base.Channel.ConsultarSolicitudesEnviadas(soliciante);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesEnviadasAsync(int soliciante) {
+            return base.Channel.ConsultarSolicitudesEnviadasAsync(soliciante);
         }
     }
 }

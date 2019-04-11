@@ -203,7 +203,13 @@
     <None Include="Connected Services\AmigosServicios\AmigosServices3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\AmigosServicios\AmigosServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\AmigosServicios\ClienteIntellectus.AmigosServicios.InsertarRespuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AmigosServicios\ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.InsertarRespuesta.datasource">

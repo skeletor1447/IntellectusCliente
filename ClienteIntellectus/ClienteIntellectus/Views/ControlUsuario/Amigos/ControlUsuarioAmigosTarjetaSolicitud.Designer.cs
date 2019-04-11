@@ -69,11 +69,11 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(254, 3);
+            this.btnAgregar.Location = new System.Drawing.Point(229, 3);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 23);
             this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Text = "Enviar solicitud";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -108,7 +108,7 @@
 
         #endregion
         private System.Windows.Forms.Label labelInstitucion;
-        private System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.PictureBox picturePerfil;
         public System.Windows.Forms.Label labelNick;
         public System.Windows.Forms.PictureBox pictureOnline;

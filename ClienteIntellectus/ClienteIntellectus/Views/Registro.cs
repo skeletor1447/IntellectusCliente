@@ -36,7 +36,6 @@ namespace ClienteIntellectus.Views
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         
 
         public void MostrarMensajeUsuarioError(string mensaje)
