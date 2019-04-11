@@ -16,5 +16,15 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
         {
             InitializeComponent();
         }
+
+        private void btnAgregarAmigos_Click(object sender, EventArgs e)
+        {
+            controlUsuarioAmigosAgregarAmigosPrincipal1.BringToFront();
+        }
+
+        private void btnChat_Click(object sender, EventArgs e)
+        {
+            controlUsuarioAmigosChatChat1.BringToFront();
+        }
     }
 }

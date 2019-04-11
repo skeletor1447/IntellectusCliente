@@ -139,3 +139,6 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\Rollbar.xml
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.Registro.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatChat.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosTarjetaSolicitud.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal.resources

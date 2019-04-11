@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.panelAmigosListaAmigos = new System.Windows.Forms.Panel();
-            this.panelAmigosPrincipalMenu = new System.Windows.Forms.Panel();
             this.panelAmigosListaAmigosMenu = new System.Windows.Forms.Panel();
-            this.panelAmigosLibre = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panelAmigosPrincipalMenu = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregarAmigos = new System.Windows.Forms.Button();
+            this.btnChat = new System.Windows.Forms.Button();
+            this.panelAmigosLibre = new System.Windows.Forms.Panel();
+            this.controlUsuarioAmigosChatChat1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatChat();
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal();
             this.panelAmigosListaAmigos.SuspendLayout();
-            this.panelAmigosPrincipalMenu.SuspendLayout();
             this.panelAmigosListaAmigosMenu.SuspendLayout();
+            this.panelAmigosPrincipalMenu.SuspendLayout();
+            this.panelAmigosLibre.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAmigosListaAmigos
@@ -50,17 +53,6 @@
             this.panelAmigosListaAmigos.Size = new System.Drawing.Size(221, 472);
             this.panelAmigosListaAmigos.TabIndex = 0;
             // 
-            // panelAmigosPrincipalMenu
-            // 
-            this.panelAmigosPrincipalMenu.Controls.Add(this.button3);
-            this.panelAmigosPrincipalMenu.Controls.Add(this.button2);
-            this.panelAmigosPrincipalMenu.Controls.Add(this.button1);
-            this.panelAmigosPrincipalMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAmigosPrincipalMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelAmigosPrincipalMenu.Name = "panelAmigosPrincipalMenu";
-            this.panelAmigosPrincipalMenu.Size = new System.Drawing.Size(565, 62);
-            this.panelAmigosPrincipalMenu.TabIndex = 1;
-            // 
             // panelAmigosListaAmigosMenu
             // 
             this.panelAmigosListaAmigosMenu.Controls.Add(this.button4);
@@ -70,31 +62,25 @@
             this.panelAmigosListaAmigosMenu.Size = new System.Drawing.Size(221, 62);
             this.panelAmigosListaAmigosMenu.TabIndex = 0;
             // 
-            // panelAmigosLibre
+            // button4
             // 
-            this.panelAmigosLibre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAmigosLibre.Location = new System.Drawing.Point(0, 62);
-            this.panelAmigosLibre.Name = "panelAmigosLibre";
-            this.panelAmigosLibre.Size = new System.Drawing.Size(565, 410);
-            this.panelAmigosLibre.TabIndex = 2;
+            this.button4.Location = new System.Drawing.Point(39, 15);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(97, 32);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Nick";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // panelAmigosPrincipalMenu
             // 
-            this.button1.Location = new System.Drawing.Point(39, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Chat";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(151, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "AgregarAmigos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.panelAmigosPrincipalMenu.Controls.Add(this.button3);
+            this.panelAmigosPrincipalMenu.Controls.Add(this.btnAgregarAmigos);
+            this.panelAmigosPrincipalMenu.Controls.Add(this.btnChat);
+            this.panelAmigosPrincipalMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAmigosPrincipalMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelAmigosPrincipalMenu.Name = "panelAmigosPrincipalMenu";
+            this.panelAmigosPrincipalMenu.Size = new System.Drawing.Size(565, 62);
+            this.panelAmigosPrincipalMenu.TabIndex = 1;
             // 
             // button3
             // 
@@ -105,14 +91,51 @@
             this.button3.Text = "Solicitudes pendientes";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAgregarAmigos
             // 
-            this.button4.Location = new System.Drawing.Point(39, 15);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 32);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Nick";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAgregarAmigos.Location = new System.Drawing.Point(151, 14);
+            this.btnAgregarAmigos.Name = "btnAgregarAmigos";
+            this.btnAgregarAmigos.Size = new System.Drawing.Size(107, 33);
+            this.btnAgregarAmigos.TabIndex = 1;
+            this.btnAgregarAmigos.Text = "AgregarAmigos";
+            this.btnAgregarAmigos.UseVisualStyleBackColor = true;
+            this.btnAgregarAmigos.Click += new System.EventHandler(this.btnAgregarAmigos_Click);
+            // 
+            // btnChat
+            // 
+            this.btnChat.Location = new System.Drawing.Point(39, 14);
+            this.btnChat.Name = "btnChat";
+            this.btnChat.Size = new System.Drawing.Size(106, 33);
+            this.btnChat.TabIndex = 0;
+            this.btnChat.Text = "Chat";
+            this.btnChat.UseVisualStyleBackColor = true;
+            this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
+            // 
+            // panelAmigosLibre
+            // 
+            this.panelAmigosLibre.Controls.Add(this.controlUsuarioAmigosAgregarAmigosPrincipal1);
+            this.panelAmigosLibre.Controls.Add(this.controlUsuarioAmigosChatChat1);
+            this.panelAmigosLibre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAmigosLibre.Location = new System.Drawing.Point(0, 62);
+            this.panelAmigosLibre.Name = "panelAmigosLibre";
+            this.panelAmigosLibre.Size = new System.Drawing.Size(565, 410);
+            this.panelAmigosLibre.TabIndex = 2;
+            // 
+            // controlUsuarioAmigosChatChat1
+            // 
+            this.controlUsuarioAmigosChatChat1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAmigosChatChat1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAmigosChatChat1.Name = "controlUsuarioAmigosChatChat1";
+            this.controlUsuarioAmigosChatChat1.Size = new System.Drawing.Size(565, 410);
+            this.controlUsuarioAmigosChatChat1.TabIndex = 0;
+            // 
+            // controlUsuarioAmigosAgregarAmigosPrincipal1
+            // 
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Name = "controlUsuarioAmigosAgregarAmigosPrincipal1";
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Size = new System.Drawing.Size(565, 410);
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.TabIndex = 1;
             // 
             // ControlUsuarioAmigosPrincipal
             // 
@@ -124,8 +147,9 @@
             this.Name = "ControlUsuarioAmigosPrincipal";
             this.Size = new System.Drawing.Size(786, 472);
             this.panelAmigosListaAmigos.ResumeLayout(false);
-            this.panelAmigosPrincipalMenu.ResumeLayout(false);
             this.panelAmigosListaAmigosMenu.ResumeLayout(false);
+            this.panelAmigosPrincipalMenu.ResumeLayout(false);
+            this.panelAmigosLibre.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -137,8 +161,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panelAmigosPrincipalMenu;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarAmigos;
+        private System.Windows.Forms.Button btnChat;
         private System.Windows.Forms.Panel panelAmigosLibre;
+        public Chat.ControlUsuarioAmigosChatChat controlUsuarioAmigosChatChat1;
+        private AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal controlUsuarioAmigosAgregarAmigosPrincipal1;
     }
 }

@@ -100,11 +100,29 @@
     </Compile>
     <Compile Include="Presentador\LoginPresentador.cs" />
     <Compile Include="Presentador\RegistroPresentador.cs" />
+    <Compile Include="Views\ControlUsuario\Amigos\AgregarAmigos\ControlUsuarioAmigosAgregarAmigosPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\AgregarAmigos\ControlUsuarioAmigosAgregarAmigosPrincipal.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosAgregarAmigosPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatChat.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosChatChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaSolicitud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaSolicitud.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosTarjetaSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.cs">
       <SubType>UserControl</SubType>
@@ -143,8 +161,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\AgregarAmigos\ControlUsuarioAmigosAgregarAmigosPrincipal.resx">
+      <DependentUpon>ControlUsuarioAmigosAgregarAmigosPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatChat.resx">
+      <DependentUpon>ControlUsuarioAmigosChatChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaSolicitud.resx">
+      <DependentUpon>ControlUsuarioAmigosTarjetaSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.resx">
       <DependentUpon>ControlUsuarioPrincipalPrincipal.cs</DependentUpon>

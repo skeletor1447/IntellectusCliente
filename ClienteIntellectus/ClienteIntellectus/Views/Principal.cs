@@ -74,6 +74,7 @@ namespace ClienteIntellectus.Views
         private void btnAmigos_Click(object sender, EventArgs e)
         {
             controlUsuarioAmigosPrincipal1.BringToFront();
+            controlUsuarioAmigosPrincipal1.controlUsuarioAmigosChatChat1.BringToFront();
         }
     }
 }
