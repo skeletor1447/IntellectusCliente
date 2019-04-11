@@ -45,28 +45,64 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos
                             List<UsuarioServicios.Usuario> listaBusqueda = respuesta.Entidades.Where(x => x.ID != ClienteIntellectus.Views.Principal.ID).ToList();
                             List<AmigosServicios.SolicitudAmistad> solicitudAmistadEnviadas = resultadoSolicitud.Entidades.ToList();
 
-                            List<UsuarioServicios.Usuario> listaMatch = listaBusqueda.Where(x => solicitudAmistadEnviadas.Exists(y => y.IdSolicitado == x.ID)).ToList();
+                            List<UsuarioServicios.Usuario> listaMatchEnviadas = listaBusqueda.Where(x => solicitudAmistadEnviadas.Exists(y => y.IdSolicitado == x.ID)).ToList();
 
                             
-
-                            foreach (var usuario in listaBusqueda)
+                            try
                             {
-                                ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario.Nick, usuario.ID);
+                                AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 resultadoRecibidas = amigosServicesClient.ConsultarSolicitudesRecibidas((int)ClienteIntellectus.Views.Principal.ID);
+                               
 
-                                foreach(var match in listaMatch)
+                                if (!resultadoRecibidas.Error)
                                 {
-                                    if(cuats.IDAlumno == match.ID)
+                                    List<AmigosServicios.SolicitudAmistad> solicitudAmistadRecibidas = resultadoRecibidas.Entidades.ToList();
+                                    List<UsuarioServicios.Usuario> listaMatchRecibidas = listaBusqueda.Where(x => solicitudAmistadRecibidas.Exists(y => y.IdSolicitante == x.ID)).ToList();
+
+
+                                    foreach (var usuario in listaBusqueda)
                                     {
-                                        cuats.Pendiente = true;
-                                        cuats.btnAgregar.Text = "Cancelar solicitud";
-                                        listaMatch.Remove(match);
-                                        break;
+                                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario.Nick, usuario.ID);
+
+                                        foreach (var match in listaMatchEnviadas)
+                                        {
+                                            if (cuats.IDAlumno == match.ID)
+                                            {
+                                                cuats.Pendiente = true;
+                                                cuats.btnAgregar.Text = "Cancelar solicitud";
+                                                listaMatchEnviadas.Remove(match);
+                                                break;
+                                            }
+
+
+                                        }
+
+                                        foreach (var match in listaMatchRecibidas)
+                                        {
+                                            if (cuats.IDAlumno == match.ID)
+                                            {
+                                                cuats.Pendiente = true;
+                                                cuats.btnAgregar.Text = "Aceptar solicitud";
+                                                listaMatchEnviadas.Remove(match);
+                                                break;
+                                            }
+
+
+                                        }
+
+                                        flowLayoutPanel1.Controls.Add(cuats);
                                     }
                                 }
+                                else
+                                {
+                                    MessageBox.Show(resultadoRecibidas.Errores["Error"]);
+                                }
 
-                                flowLayoutPanel1.Controls.Add(cuats);
                             }
+                            catch(Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
 
+                            }
                             
                         }
                         else

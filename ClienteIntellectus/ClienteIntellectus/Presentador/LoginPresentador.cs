@@ -26,7 +26,7 @@ namespace ClienteIntellectus.Presentador
             {
                 ilogin.ClienteSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-                IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("192.168.1.72"), 8001);
+                IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8001);
 
                 ilogin.ClienteSocket.Connect(iPEndPoint);
 

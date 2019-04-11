@@ -259,6 +259,12 @@ namespace ClienteIntellectus.AmigosServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadasResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesEnviadasAsync(int soliciante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidasResponse")]
+        ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarSolicitudesRecibidas(int soliciante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidasResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesRecibidasAsync(int soliciante);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -302,6 +308,14 @@ namespace ClienteIntellectus.AmigosServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesEnviadasAsync(int soliciante) {
             return base.Channel.ConsultarSolicitudesEnviadasAsync(soliciante);
+        }
+        
+        public ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarSolicitudesRecibidas(int soliciante) {
+            return base.Channel.ConsultarSolicitudesRecibidas(soliciante);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarSolicitudesRecibidasAsync(int soliciante) {
+            return base.Channel.ConsultarSolicitudesRecibidasAsync(soliciante);
         }
     }
 }

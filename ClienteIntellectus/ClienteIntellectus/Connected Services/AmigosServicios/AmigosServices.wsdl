@@ -21,6 +21,12 @@
   <wsdl:message name="IAmigosServices_ConsultarSolicitudesEnviadas_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarSolicitudesEnviadasResponse" />
   </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarSolicitudesRecibidas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesRecibidas" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarSolicitudesRecibidas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesRecibidasResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAmigosServices">
     <wsdl:operation name="SolicitudDeAmistad">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistad" message="tns:IAmigosServices_SolicitudDeAmistad_InputMessage" />
@@ -29,6 +35,10 @@
     <wsdl:operation name="ConsultarSolicitudesEnviadas">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas" message="tns:IAmigosServices_ConsultarSolicitudesEnviadas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadasResponse" message="tns:IAmigosServices_ConsultarSolicitudesEnviadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesRecibidas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas" message="tns:IAmigosServices_ConsultarSolicitudesRecibidas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidasResponse" message="tns:IAmigosServices_ConsultarSolicitudesRecibidas_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAmigosServices" type="tns:IAmigosServices">
@@ -44,6 +54,15 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarSolicitudesEnviadas">
       <soap:operation soapAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesEnviadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesRecibidas">
+      <soap:operation soapAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -37,7 +37,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                     if (!respuesta.Error)
                     {
                         btnAgregar.Text = "Cancelar solicitud";
-                        return;
+                        
                     }
                     else
                     {
@@ -53,7 +53,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             {
 
             }
-            btnAgregar.Enabled = false;
+            btnAgregar.Enabled = true;
         }
     }
 }
