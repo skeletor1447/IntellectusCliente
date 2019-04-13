@@ -7,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 {
     public partial class ControlUsuarioAmigosTarjetaSolicitud : UserControl
     {
         UsuarioServicios.UsuarioAmistad UsuarioAmistad { get; set; }
-        public ControlUsuarioAmigosTarjetaSolicitud(UsuarioServicios.UsuarioAmistad usuarioAmistad)
+        UserControl padre;
+        public ControlUsuarioAmigosTarjetaSolicitud(UsuarioServicios.UsuarioAmistad usuarioAmistad, UserControl padre)
         {
             InitializeComponent();
             this.UsuarioAmistad = usuarioAmistad;
             this.labelNick.Text = usuarioAmistad.Usuario.Nick;
+            this.padre = padre;
 
             if(usuarioAmistad.SolicitudAmistad != null)
             {
@@ -30,7 +33,15 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 }
                 else if(usuarioAmistad.EsSolicitante == false)
                 {
-                    btnAgregar.Text = "Aceptar solicitud";
+                    if (usuarioAmistad.SolicitudAmistad.Estado == "Amigos")
+                        btnAgregar.Text = "Eliminar amigo";
+                    else
+                        btnAgregar.Text = "Cancelar solicitud";
+                    
+                }
+                else
+                {
+                    btnAgregar.Text = "Eliminar amigos";
                 }
             }
             else
@@ -46,36 +57,104 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
             btnAgregar.Enabled = false;
-            if (UsuarioAmistad.SolicitudAmistad == null)//no tiene una solicitud enviada
+            switch(btnAgregar.Text)
             {
-                try
-                {
-                    AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
-
-                    AmigosServicios.InsertarRespuesta respuesta = amigosServicesClient.SolicitudDeAmistad((int)ClienteIntellectus.Views.Principal.ID, (int)UsuarioAmistad.Usuario.ID);
-
-                    if (!respuesta.Error)
+                case "Enviar solicitud":
+                    try
                     {
-                        btnAgregar.Text = "Cancelar solicitud";
-                        
-                    }
-                    else
-                    {
-                        MessageBox.Show(respuesta.Errores["Error"]);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else// tiene una solicitud enviada, el boton tiene como texto Cancelar solicitud
-            {
+                        AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
 
+                        AmigosServicios.InsertarRespuesta respuesta = amigosServicesClient.SolicitudDeAmistad((int)ClienteIntellectus.Views.Principal.ID, (int)UsuarioAmistad.Usuario.ID);
+
+                        if (!respuesta.Error)
+                        {
+                            btnAgregar.Text = "Cancelar solicitud";
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(respuesta.Errores["Error"]);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    break;
+
+                case "Aceptar solicitud":
+                    try
+                    {
+                        AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
+
+                        AmigosServicios.ActualizarRespuestaOfSolicitudAmistadqYdlCAL1 respuesta = amigosServicesClient.AceptarSolicitud((int)UsuarioAmistad.SolicitudAmistad.IdSolicitudAmistad);
+
+                        if (!respuesta.Error)
+                        {
+                            btnAgregar.Text = "Eliminar amigo";
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(respuesta.Errores["Error"]);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    break;
+                case "Eliminar amigo":
+                    try
+                    {
+                        AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
+
+                        AmigosServicios.EliminarRespuestaOfSolicitudAmistadqYdlCAL1 respuesta = amigosServicesClient.EliminarSolicitud((int)UsuarioAmistad.SolicitudAmistad.IdSolicitudAmistad);
+
+                        if (!respuesta.Error)
+                        {
+                            btnAgregar.Text = "Enviar solicitud";
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(respuesta.Errores["Error"]);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    break;
+
+                case "Cancelar solicitud":
+                    try
+                    {
+                        AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
+
+                        AmigosServicios.EliminarRespuestaOfSolicitudAmistadqYdlCAL1 respuesta = amigosServicesClient.EliminarSolicitud((int)UsuarioAmistad.SolicitudAmistad.IdSolicitudAmistad);
+
+                        if (!respuesta.Error)
+                        {
+                            btnAgregar.Text = "Enviar solicitud";
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(respuesta.Errores["Error"]);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    break;
             }
             btnAgregar.Enabled = true;
+
+            if (padre is ControlUsuarioAmigosAgregarAmigosPrincipal)
+                (padre as ControlUsuarioAmigosAgregarAmigosPrincipal).txtBuscarAlumno_TextChanged(null, null);
         }
     }
 }

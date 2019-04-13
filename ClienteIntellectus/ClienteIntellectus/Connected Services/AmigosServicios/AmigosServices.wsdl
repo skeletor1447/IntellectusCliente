@@ -27,6 +27,18 @@
   <wsdl:message name="IAmigosServices_ConsultarSolicitudesRecibidas_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarSolicitudesRecibidasResponse" />
   </wsdl:message>
+  <wsdl:message name="IAmigosServices_EliminarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_EliminarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_AceptarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:AceptarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_AceptarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AceptarSolicitudResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAmigosServices">
     <wsdl:operation name="SolicitudDeAmistad">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistad" message="tns:IAmigosServices_SolicitudDeAmistad_InputMessage" />
@@ -39,6 +51,14 @@
     <wsdl:operation name="ConsultarSolicitudesRecibidas">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas" message="tns:IAmigosServices_ConsultarSolicitudesRecibidas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidasResponse" message="tns:IAmigosServices_ConsultarSolicitudesRecibidas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/EliminarSolicitud" message="tns:IAmigosServices_EliminarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/EliminarSolicitudResponse" message="tns:IAmigosServices_EliminarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AceptarSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/AceptarSolicitud" message="tns:IAmigosServices_AceptarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/AceptarSolicitudResponse" message="tns:IAmigosServices_AceptarSolicitud_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAmigosServices" type="tns:IAmigosServices">
@@ -63,6 +83,24 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarSolicitudesRecibidas">
       <soap:operation soapAction="http://tempuri.org/IAmigosServices/ConsultarSolicitudesRecibidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IAmigosServices/EliminarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AceptarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IAmigosServices/AceptarSolicitud" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

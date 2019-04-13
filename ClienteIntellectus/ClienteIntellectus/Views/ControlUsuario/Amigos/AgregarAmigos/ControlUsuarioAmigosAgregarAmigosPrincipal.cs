@@ -19,7 +19,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos
             
         }
 
-        private void txtBuscarAlumno_TextChanged(object sender, EventArgs e)
+        public void txtBuscarAlumno_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
 
@@ -36,7 +36,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos
                 {
                     foreach(var usuario in _respuesta.Entidades)
                     {
-                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario);
+                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario,this);
 
                         flowLayoutPanel1.Controls.Add(cuats);
                     }
