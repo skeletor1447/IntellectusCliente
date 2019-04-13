@@ -534,6 +534,12 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarPorBusqueda", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarPorBusquedaResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarPorBusquedaAsync(long idCliente, string busqueda);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorCliente", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorClienteResponse")]
+        ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1 ConsultarSolicitudesPorCliente(int idcliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorCliente", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorClienteResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarSolicitudesPorClienteAsync(int idcliente);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -593,6 +599,14 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarPorBusquedaAsync(long idCliente, string busqueda) {
             return base.Channel.ConsultarPorBusquedaAsync(idCliente, busqueda);
+        }
+        
+        public ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1 ConsultarSolicitudesPorCliente(int idcliente) {
+            return base.Channel.ConsultarSolicitudesPorCliente(idcliente);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarSolicitudesPorClienteAsync(int idcliente) {
+            return base.Channel.ConsultarSolicitudesPorClienteAsync(idcliente);
         }
     }
 }

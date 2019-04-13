@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelPendientes = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanelEnviadas = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,31 +47,6 @@
             this.panel1.Size = new System.Drawing.Size(714, 51);
             this.panel1.TabIndex = 0;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 51);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(714, 194);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 245);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(714, 60);
-            this.panel2.TabIndex = 2;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 305);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(714, 204);
-            this.flowLayoutPanel2.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -81,6 +56,23 @@
             this.label1.Size = new System.Drawing.Size(229, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes pendientes";
+            // 
+            // flowLayoutPanelPendientes
+            // 
+            this.flowLayoutPanelPendientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanelPendientes.Location = new System.Drawing.Point(0, 51);
+            this.flowLayoutPanelPendientes.Name = "flowLayoutPanelPendientes";
+            this.flowLayoutPanelPendientes.Size = new System.Drawing.Size(714, 194);
+            this.flowLayoutPanelPendientes.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 245);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(714, 60);
+            this.panel2.TabIndex = 2;
             // 
             // label2
             // 
@@ -92,13 +84,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Solicitudes enviadas";
             // 
+            // flowLayoutPanelEnviadas
+            // 
+            this.flowLayoutPanelEnviadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelEnviadas.Location = new System.Drawing.Point(0, 305);
+            this.flowLayoutPanelEnviadas.Name = "flowLayoutPanelEnviadas";
+            this.flowLayoutPanelEnviadas.Size = new System.Drawing.Size(714, 204);
+            this.flowLayoutPanelEnviadas.TabIndex = 3;
+            // 
             // ControlUsuarioAmigosSolicitudPendientePrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.flowLayoutPanelEnviadas);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanelPendientes);
             this.Controls.Add(this.panel1);
             this.Name = "ControlUsuarioAmigosSolicitudPendientePrincipal";
             this.Size = new System.Drawing.Size(714, 509);
@@ -114,9 +114,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPendientes;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEnviadas;
     }
 }

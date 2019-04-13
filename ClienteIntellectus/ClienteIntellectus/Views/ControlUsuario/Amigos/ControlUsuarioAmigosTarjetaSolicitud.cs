@@ -48,7 +48,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                     {
                         btnAgregar.Text = "Aceptar solicitud";
                         btnCancelar.Visible = true;
-                        btnCancelar.Text = "Cancelar solicitud";
+                        btnCancelar.Text = "Rechazar solicitud";
                     }
                 }
                 else
@@ -142,6 +142,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                     break;
 
                 case "Cancelar solicitud":
+                case "Rechazar solicitud":
                     try
                     {
                         AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
@@ -167,7 +168,13 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             btnAgregar.Enabled = true;
 
             if (padre is ControlUsuarioAmigosAgregarAmigosPrincipal)
+            {
                 (padre as ControlUsuarioAmigosAgregarAmigosPrincipal).txtBuscarAlumno_TextChanged(null, null);
+            }
+            else if(padre is ControlUsuarioAmigosPrincipal)
+            {
+                (padre as ControlUsuarioAmigosPrincipal).btnSolicitudPendiente_Click(null,null);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -194,6 +201,15 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 MessageBox.Show(ex.Message);
             }
             btnCancelar.Enabled = true;
+
+            if (padre is ControlUsuarioAmigosAgregarAmigosPrincipal)
+            {
+                (padre as ControlUsuarioAmigosAgregarAmigosPrincipal).txtBuscarAlumno_TextChanged(null, null);
+            }
+            else if (padre is ControlUsuarioAmigosPrincipal)
+            {
+                (padre as ControlUsuarioAmigosPrincipal).btnSolicitudPendiente_Click(null, null);
+            }
         }
     }
 }

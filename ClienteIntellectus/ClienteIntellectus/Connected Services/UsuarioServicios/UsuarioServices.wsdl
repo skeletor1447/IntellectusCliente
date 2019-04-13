@@ -33,6 +33,12 @@
   <wsdl:message name="IUsuarioServices_ConsultarPorBusqueda_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarPorBusquedaResponse" />
   </wsdl:message>
+  <wsdl:message name="IUsuarioServices_ConsultarSolicitudesPorCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesPorCliente" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioServices_ConsultarSolicitudesPorCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesPorClienteResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUsuarioServices">
     <wsdl:operation name="ConsultarPorCorreoYPassword">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword" message="tns:IUsuarioServices_ConsultarPorCorreoYPassword_InputMessage" />
@@ -49,6 +55,10 @@
     <wsdl:operation name="ConsultarPorBusqueda">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorBusqueda" message="tns:IUsuarioServices_ConsultarPorBusqueda_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorBusquedaResponse" message="tns:IUsuarioServices_ConsultarPorBusqueda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesPorCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorCliente" message="tns:IUsuarioServices_ConsultarSolicitudesPorCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorClienteResponse" message="tns:IUsuarioServices_ConsultarSolicitudesPorCliente_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuarioServices" type="tns:IUsuarioServices">
@@ -82,6 +92,15 @@
     </wsdl:operation>
     <wsdl:operation name="ConsultarPorBusqueda">
       <soap:operation soapAction="http://tempuri.org/IUsuarioServices/ConsultarPorBusqueda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesPorCliente">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

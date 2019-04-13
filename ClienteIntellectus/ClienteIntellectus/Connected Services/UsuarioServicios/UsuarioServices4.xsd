@@ -60,4 +60,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ConsultarSolicitudesPorCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idcliente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSolicitudesPorClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" minOccurs="0" name="ConsultarSolicitudesPorClienteResult" nillable="true" type="q6:MultipleRespuestaOfUsuarioAmistadqYdlCAL1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
