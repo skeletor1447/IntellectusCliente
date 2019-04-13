@@ -34,6 +34,7 @@
             this.labelInstitucion = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureOnline = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOnline)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             this.picturePerfil.Image = ((System.Drawing.Image)(resources.GetObject("picturePerfil.Image")));
             this.picturePerfil.Location = new System.Drawing.Point(13, 11);
             this.picturePerfil.Name = "picturePerfil";
-            this.picturePerfil.Size = new System.Drawing.Size(60, 50);
+            this.picturePerfil.Size = new System.Drawing.Size(60, 62);
             this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturePerfil.TabIndex = 0;
             this.picturePerfil.TabStop = false;
@@ -61,7 +62,7 @@
             // labelInstitucion
             // 
             this.labelInstitucion.AutoSize = true;
-            this.labelInstitucion.Location = new System.Drawing.Point(87, 49);
+            this.labelInstitucion.Location = new System.Drawing.Point(83, 55);
             this.labelInstitucion.Name = "labelInstitucion";
             this.labelInstitucion.Size = new System.Drawing.Size(191, 13);
             this.labelInstitucion.TabIndex = 2;
@@ -80,17 +81,29 @@
             // pictureOnline
             // 
             this.pictureOnline.Image = ((System.Drawing.Image)(resources.GetObject("pictureOnline.Image")));
-            this.pictureOnline.Location = new System.Drawing.Point(300, 44);
+            this.pictureOnline.Location = new System.Drawing.Point(301, 59);
             this.pictureOnline.Name = "pictureOnline";
             this.pictureOnline.Size = new System.Drawing.Size(24, 16);
             this.pictureOnline.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureOnline.TabIndex = 4;
             this.pictureOnline.TabStop = false;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(229, 30);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar solicitud";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // ControlUsuarioAmigosTarjetaSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pictureOnline);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.labelInstitucion);
@@ -98,7 +111,7 @@
             this.Controls.Add(this.picturePerfil);
             this.Name = "ControlUsuarioAmigosTarjetaSolicitud";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(335, 70);
+            this.Size = new System.Drawing.Size(335, 81);
             ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOnline)).EndInit();
             this.ResumeLayout(false);
@@ -112,5 +125,6 @@
         public System.Windows.Forms.PictureBox picturePerfil;
         public System.Windows.Forms.Label labelNick;
         public System.Windows.Forms.PictureBox pictureOnline;
+        public System.Windows.Forms.Button btnCancelar;
     }
 }

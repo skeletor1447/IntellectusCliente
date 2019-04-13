@@ -27,21 +27,34 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 if(usuarioAmistad.EsSolicitante == true)
                 {
                     if (usuarioAmistad.SolicitudAmistad.Estado == "Amigos")
+                    {
                         btnAgregar.Text = "Eliminar amigo";
+                        btnCancelar.Visible = false;
+                    }
                     else
+                    {
                         btnAgregar.Text = "Cancelar solicitud";
+                        btnCancelar.Visible = false;
+                    }
                 }
                 else if(usuarioAmistad.EsSolicitante == false)
                 {
                     if (usuarioAmistad.SolicitudAmistad.Estado == "Amigos")
+                    {
                         btnAgregar.Text = "Eliminar amigo";
+                        btnCancelar.Visible = false;
+                    }
                     else
-                        btnAgregar.Text = "Cancelar solicitud";
-                    
+                    {
+                        btnAgregar.Text = "Aceptar solicitud";
+                        btnCancelar.Visible = true;
+                        btnCancelar.Text = "Cancelar solicitud";
+                    }
                 }
                 else
                 {
-                    btnAgregar.Text = "Eliminar amigos";
+                    btnAgregar.Text = "Eliminar amigo";
+                    btnCancelar.Visible = false;
                 }
             }
             else
@@ -155,6 +168,32 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 
             if (padre is ControlUsuarioAmigosAgregarAmigosPrincipal)
                 (padre as ControlUsuarioAmigosAgregarAmigosPrincipal).txtBuscarAlumno_TextChanged(null, null);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            btnCancelar.Enabled = false;
+            try
+            {
+                AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
+
+                AmigosServicios.EliminarRespuestaOfSolicitudAmistadqYdlCAL1 respuesta = amigosServicesClient.EliminarSolicitud((int)UsuarioAmistad.SolicitudAmistad.IdSolicitudAmistad);
+
+                if (!respuesta.Error)
+                {
+                    btnAgregar.Text = "Enviar solicitud";
+                    btnCancelar.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show(respuesta.Errores["Error"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            btnCancelar.Enabled = true;
         }
     }
 }
