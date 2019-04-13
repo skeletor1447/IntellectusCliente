@@ -32,12 +32,13 @@
             this.panelAmigosListaAmigosMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.panelAmigosPrincipalMenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSolicitudPendiente = new System.Windows.Forms.Button();
             this.btnAgregarAmigos = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
             this.panelAmigosLibre = new System.Windows.Forms.Panel();
-            this.controlUsuarioAmigosChatChat1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatChat();
             this.controlUsuarioAmigosAgregarAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal();
+            this.controlUsuarioAmigosChatChat1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatChat();
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.SolicitudPendiente.ControlUsuarioAmigosSolicitudPendientePrincipal();
             this.panelAmigosListaAmigos.SuspendLayout();
             this.panelAmigosListaAmigosMenu.SuspendLayout();
             this.panelAmigosPrincipalMenu.SuspendLayout();
@@ -73,7 +74,7 @@
             // 
             // panelAmigosPrincipalMenu
             // 
-            this.panelAmigosPrincipalMenu.Controls.Add(this.button3);
+            this.panelAmigosPrincipalMenu.Controls.Add(this.btnSolicitudPendiente);
             this.panelAmigosPrincipalMenu.Controls.Add(this.btnAgregarAmigos);
             this.panelAmigosPrincipalMenu.Controls.Add(this.btnChat);
             this.panelAmigosPrincipalMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,14 +83,15 @@
             this.panelAmigosPrincipalMenu.Size = new System.Drawing.Size(565, 62);
             this.panelAmigosPrincipalMenu.TabIndex = 1;
             // 
-            // button3
+            // btnSolicitudPendiente
             // 
-            this.button3.Location = new System.Drawing.Point(264, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Solicitudes pendientes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSolicitudPendiente.Location = new System.Drawing.Point(264, 14);
+            this.btnSolicitudPendiente.Name = "btnSolicitudPendiente";
+            this.btnSolicitudPendiente.Size = new System.Drawing.Size(128, 33);
+            this.btnSolicitudPendiente.TabIndex = 2;
+            this.btnSolicitudPendiente.Text = "Solicitudes pendientes";
+            this.btnSolicitudPendiente.UseVisualStyleBackColor = true;
+            this.btnSolicitudPendiente.Click += new System.EventHandler(this.btnSolicitudPendiente_Click);
             // 
             // btnAgregarAmigos
             // 
@@ -113,6 +115,7 @@
             // 
             // panelAmigosLibre
             // 
+            this.panelAmigosLibre.Controls.Add(this.controlUsuarioAmigosSolicitudPendientePrincipal1);
             this.panelAmigosLibre.Controls.Add(this.controlUsuarioAmigosAgregarAmigosPrincipal1);
             this.panelAmigosLibre.Controls.Add(this.controlUsuarioAmigosChatChat1);
             this.panelAmigosLibre.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,6 +123,14 @@
             this.panelAmigosLibre.Name = "panelAmigosLibre";
             this.panelAmigosLibre.Size = new System.Drawing.Size(565, 410);
             this.panelAmigosLibre.TabIndex = 2;
+            // 
+            // controlUsuarioAmigosAgregarAmigosPrincipal1
+            // 
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Name = "controlUsuarioAmigosAgregarAmigosPrincipal1";
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Size = new System.Drawing.Size(565, 410);
+            this.controlUsuarioAmigosAgregarAmigosPrincipal1.TabIndex = 1;
             // 
             // controlUsuarioAmigosChatChat1
             // 
@@ -129,13 +140,13 @@
             this.controlUsuarioAmigosChatChat1.Size = new System.Drawing.Size(565, 410);
             this.controlUsuarioAmigosChatChat1.TabIndex = 0;
             // 
-            // controlUsuarioAmigosAgregarAmigosPrincipal1
+            // controlUsuarioAmigosSolicitudPendientePrincipal1
             // 
-            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
-            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Name = "controlUsuarioAmigosAgregarAmigosPrincipal1";
-            this.controlUsuarioAmigosAgregarAmigosPrincipal1.Size = new System.Drawing.Size(565, 410);
-            this.controlUsuarioAmigosAgregarAmigosPrincipal1.TabIndex = 1;
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1.Name = "controlUsuarioAmigosSolicitudPendientePrincipal1";
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1.Size = new System.Drawing.Size(565, 410);
+            this.controlUsuarioAmigosSolicitudPendientePrincipal1.TabIndex = 2;
             // 
             // ControlUsuarioAmigosPrincipal
             // 
@@ -160,11 +171,12 @@
         private System.Windows.Forms.Panel panelAmigosListaAmigosMenu;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panelAmigosPrincipalMenu;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSolicitudPendiente;
         private System.Windows.Forms.Button btnAgregarAmigos;
         private System.Windows.Forms.Button btnChat;
         private System.Windows.Forms.Panel panelAmigosLibre;
         public Chat.ControlUsuarioAmigosChatChat controlUsuarioAmigosChatChat1;
         private AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal controlUsuarioAmigosAgregarAmigosPrincipal1;
+        private SolicitudPendiente.ControlUsuarioAmigosSolicitudPendientePrincipal controlUsuarioAmigosSolicitudPendientePrincipal1;
     }
 }

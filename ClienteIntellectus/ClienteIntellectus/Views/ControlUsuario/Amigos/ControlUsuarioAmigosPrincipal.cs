@@ -26,5 +26,10 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
         {
             controlUsuarioAmigosChatChat1.BringToFront();
         }
+
+        private void btnSolicitudPendiente_Click(object sender, EventArgs e)
+        {
+            controlUsuarioAmigosSolicitudPendientePrincipal1.BringToFront();
+        }
     }
 }
