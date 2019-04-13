@@ -12,27 +12,49 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 {
     public partial class ControlUsuarioAmigosTarjetaSolicitud : UserControl
     {
-        public long IDAlumno;
-        public bool Pendiente { get; set; }
-        public ControlUsuarioAmigosTarjetaSolicitud(String nick,long IDAlumno)
+        UsuarioServicios.UsuarioAmistad UsuarioAmistad { get; set; }
+        public ControlUsuarioAmigosTarjetaSolicitud(UsuarioServicios.UsuarioAmistad usuarioAmistad)
         {
             InitializeComponent();
-            this.labelNick.Text = nick;
-            this.IDAlumno = IDAlumno;
-            this.Pendiente = false;
+            this.UsuarioAmistad = usuarioAmistad;
+            this.labelNick.Text = usuarioAmistad.Usuario.Nick;
+
+            if(usuarioAmistad.SolicitudAmistad != null)
+            {
+                if(usuarioAmistad.EsSolicitante == true)
+                {
+                    if (usuarioAmistad.SolicitudAmistad.Estado == "Amigos")
+                        btnAgregar.Text = "Eliminar amigo";
+                    else
+                        btnAgregar.Text = "Cancelar solicitud";
+                }
+                else if(usuarioAmistad.EsSolicitante == false)
+                {
+                    btnAgregar.Text = "Aceptar solicitud";
+                }
+            }
+            else
+            {
+                if(usuarioAmistad.Usuario.ID == ClienteIntellectus.Views.Principal.ID)
+                {
+                    btnAgregar.Text = "Tú";
+                    btnAgregar.Enabled = false;
+                }
+            }
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
             btnAgregar.Enabled = false;
-            if (!Pendiente)//no tiene una solicitud enviada
+            if (UsuarioAmistad.SolicitudAmistad == null)//no tiene una solicitud enviada
             {
                 try
                 {
                     AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
 
-                    AmigosServicios.InsertarRespuesta respuesta = amigosServicesClient.SolicitudDeAmistad((int)ClienteIntellectus.Views.Principal.ID, (int)IDAlumno);
+                    AmigosServicios.InsertarRespuesta respuesta = amigosServicesClient.SolicitudDeAmistad((int)ClienteIntellectus.Views.Principal.ID, (int)UsuarioAmistad.Usuario.ID);
 
                     if (!respuesta.Error)
                     {

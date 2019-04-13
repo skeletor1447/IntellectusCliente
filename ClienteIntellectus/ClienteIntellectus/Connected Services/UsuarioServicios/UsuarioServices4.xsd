@@ -48,6 +48,7 @@
   <xs:element name="ConsultarPorBusqueda">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:long" />
         <xs:element minOccurs="0" name="busqueda" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -55,7 +56,7 @@
   <xs:element name="ConsultarPorBusquedaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" minOccurs="0" name="ConsultarPorBusquedaResult" nillable="true" type="q5:MultipleRespuestaOfUsuarioqYdlCAL1" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" minOccurs="0" name="ConsultarPorBusquedaResult" nillable="true" type="q5:MultipleRespuestaOfUsuarioAmistadqYdlCAL1" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

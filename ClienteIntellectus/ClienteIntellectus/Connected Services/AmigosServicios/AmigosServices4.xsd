@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfSolicitudAmistad" nillable="true" type="tns:ArrayOfSolicitudAmistad" />
   <xs:complexType name="SolicitudAmistad">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdSolicitado" type="xs:long" />
       <xs:element minOccurs="0" name="IdSolicitante" type="xs:long" />
       <xs:element minOccurs="0" name="IdSolicitudAmistad" type="xs:long" />

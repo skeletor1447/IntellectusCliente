@@ -28,92 +28,22 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos
             
             try
             {
-                UsuarioServicios.UsuarioServicesClient usuarioServices = new UsuarioServicios.UsuarioServicesClient();
+                UsuarioServicios.UsuarioServicesClient usuarioServicesClient = new UsuarioServicios.UsuarioServicesClient();
 
-                UsuarioServicios.MultipleRespuestaOfUsuarioqYdlCAL1 respuesta = usuarioServices.ConsultarPorBusqueda(txtBuscarAlumno.Text);
+                UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1 _respuesta = usuarioServicesClient.ConsultarPorBusqueda(ClienteIntellectus.Views.Principal.ID,txtBuscarAlumno.Text);
 
-                if(!respuesta.Error)
+                if(!_respuesta.Error)
                 {
-                    try
+                    foreach(var usuario in _respuesta.Entidades)
                     {
-                        AmigosServicios.AmigosServicesClient amigosServicesClient = new AmigosServicios.AmigosServicesClient();
-                        AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 resultadoSolicitud = amigosServicesClient.ConsultarSolicitudesEnviadas((int)ClienteIntellectus.Views.Principal.ID);
+                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario);
 
-                        if (!resultadoSolicitud.Error)
-                        {
-
-                            List<UsuarioServicios.Usuario> listaBusqueda = respuesta.Entidades.Where(x => x.ID != ClienteIntellectus.Views.Principal.ID).ToList();
-                            List<AmigosServicios.SolicitudAmistad> solicitudAmistadEnviadas = resultadoSolicitud.Entidades.ToList();
-
-                            List<UsuarioServicios.Usuario> listaMatchEnviadas = listaBusqueda.Where(x => solicitudAmistadEnviadas.Exists(y => y.IdSolicitado == x.ID)).ToList();
-
-                            
-                            try
-                            {
-                                AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 resultadoRecibidas = amigosServicesClient.ConsultarSolicitudesRecibidas((int)ClienteIntellectus.Views.Principal.ID);
-                               
-
-                                if (!resultadoRecibidas.Error)
-                                {
-                                    List<AmigosServicios.SolicitudAmistad> solicitudAmistadRecibidas = resultadoRecibidas.Entidades.ToList();
-                                    List<UsuarioServicios.Usuario> listaMatchRecibidas = listaBusqueda.Where(x => solicitudAmistadRecibidas.Exists(y => y.IdSolicitante == x.ID)).ToList();
-
-
-                                    foreach (var usuario in listaBusqueda)
-                                    {
-                                        ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(usuario.Nick, usuario.ID);
-
-                                        foreach (var match in listaMatchEnviadas)
-                                        {
-                                            if (cuats.IDAlumno == match.ID)
-                                            {
-                                                cuats.Pendiente = true;
-                                                cuats.btnAgregar.Text = "Cancelar solicitud";
-                                                listaMatchEnviadas.Remove(match);
-                                                break;
-                                            }
-
-
-                                        }
-
-                                        foreach (var match in listaMatchRecibidas)
-                                        {
-                                            if (cuats.IDAlumno == match.ID)
-                                            {
-                                                cuats.Pendiente = true;
-                                                cuats.btnAgregar.Text = "Aceptar solicitud";
-                                                listaMatchEnviadas.Remove(match);
-                                                break;
-                                            }
-
-
-                                        }
-
-                                        flowLayoutPanel1.Controls.Add(cuats);
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show(resultadoRecibidas.Errores["Error"]);
-                                }
-
-                            }
-                            catch(Exception ex)
-                            {
-                                MessageBox.Show(ex.Message);
-
-                            }
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show(resultadoSolicitud.Errores["Error"]);
-                        }
+                        flowLayoutPanel1.Controls.Add(cuats);
                     }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                }
+                else
+                {
+                    MessageBox.Show(_respuesta.Errores["Error"]);
                 }
             }
             catch(Exception ex)

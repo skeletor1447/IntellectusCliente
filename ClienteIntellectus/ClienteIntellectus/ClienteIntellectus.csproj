@@ -215,7 +215,7 @@
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.InsertarRespuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioqYdlCAL1.datasource">
+    <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1.datasource">
