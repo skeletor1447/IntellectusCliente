@@ -59,6 +59,7 @@
             // 
             // flowLayoutPanelPendientes
             // 
+            this.flowLayoutPanelPendientes.AutoScroll = true;
             this.flowLayoutPanelPendientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelPendientes.Location = new System.Drawing.Point(0, 51);
             this.flowLayoutPanelPendientes.Name = "flowLayoutPanelPendientes";
@@ -86,6 +87,7 @@
             // 
             // flowLayoutPanelEnviadas
             // 
+            this.flowLayoutPanelEnviadas.AutoScroll = true;
             this.flowLayoutPanelEnviadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelEnviadas.Location = new System.Drawing.Point(0, 305);
             this.flowLayoutPanelEnviadas.Name = "flowLayoutPanelEnviadas";

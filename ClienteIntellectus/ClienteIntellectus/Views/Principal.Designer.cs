@@ -47,8 +47,8 @@
             this.btnAmigos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.panelPrincipalContenido = new System.Windows.Forms.Panel();
-            this.controlUsuarioAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal();
             this.controlUsuarioPrincipalPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal();
+            this.controlUsuarioAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -130,9 +130,9 @@
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(173, 0);
+            this.btnPerfil.Location = new System.Drawing.Point(157, 0);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(138, 53);
+            this.btnPerfil.Size = new System.Drawing.Size(154, 53);
             this.btnPerfil.TabIndex = 0;
             this.btnPerfil.Text = "skeletorsfsfsdfsfsfd";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -247,14 +247,6 @@
             this.panelPrincipalContenido.Size = new System.Drawing.Size(764, 417);
             this.panelPrincipalContenido.TabIndex = 4;
             // 
-            // controlUsuarioAmigosPrincipal1
-            // 
-            this.controlUsuarioAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlUsuarioAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
-            this.controlUsuarioAmigosPrincipal1.Name = "controlUsuarioAmigosPrincipal1";
-            this.controlUsuarioAmigosPrincipal1.Size = new System.Drawing.Size(764, 417);
-            this.controlUsuarioAmigosPrincipal1.TabIndex = 0;
-            // 
             // controlUsuarioPrincipalPrincipal1
             // 
             this.controlUsuarioPrincipalPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -262,6 +254,14 @@
             this.controlUsuarioPrincipalPrincipal1.Name = "controlUsuarioPrincipalPrincipal1";
             this.controlUsuarioPrincipalPrincipal1.Size = new System.Drawing.Size(764, 417);
             this.controlUsuarioPrincipalPrincipal1.TabIndex = 1;
+            // 
+            // controlUsuarioAmigosPrincipal1
+            // 
+            this.controlUsuarioAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAmigosPrincipal1.Name = "controlUsuarioAmigosPrincipal1";
+            this.controlUsuarioAmigosPrincipal1.Size = new System.Drawing.Size(764, 417);
+            this.controlUsuarioAmigosPrincipal1.TabIndex = 0;
             // 
             // Principal
             // 
