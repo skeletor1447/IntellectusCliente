@@ -47,8 +47,14 @@ namespace ClienteIntellectus.Views
                 {
                     usuario = resultado.Entidad;
 
+                    labelPerfil.Text = usuario.Nick;
 
-                    btnPerfil.Text = usuario.Nick;
+                    using (Graphics g = CreateGraphics())
+                    {
+                        SizeF size = g.MeasureString(labelPerfil.Text, labelPerfil.Font, int.MaxValue);
+                        labelPerfil.Width = (int)Math.Ceiling(size.Width);
+                        labelPerfil.Text = labelPerfil.Text;
+                    }
                 }
                 else
                 {
@@ -75,6 +81,12 @@ namespace ClienteIntellectus.Views
         {
             controlUsuarioAmigosPrincipal1.BringToFront();
             controlUsuarioAmigosPrincipal1.controlUsuarioAmigosChatChat1.BringToFront();
+        }
+
+        private void labelPerfil_Click(object sender, EventArgs e)
+        {
+            Point point = new Point(labelPerfil.Width, labelPerfil.Height);
+            contextMenuPerfil.Show(labelPerfil, point, ToolStripDropDownDirection.BelowLeft);
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnPerfil = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
@@ -47,8 +47,14 @@
             this.btnAmigos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.panelPrincipalContenido = new System.Windows.Forms.Panel();
+            this.labelPerfil = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.controlUsuarioPrincipalPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal();
             this.controlUsuarioAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal();
+            this.contextMenuPerfil = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -60,6 +66,8 @@
             this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelPrincipalContenido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,13 +79,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(964, 53);
+            this.panel1.Size = new System.Drawing.Size(964, 31);
             this.panel1.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 17);
+            this.label3.Location = new System.Drawing.Point(13, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 3;
@@ -89,7 +97,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(209, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(144, 53);
+            this.panel10.Size = new System.Drawing.Size(144, 31);
             this.panel10.TabIndex = 2;
             // 
             // label1
@@ -97,7 +105,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 53);
+            this.label1.Size = new System.Drawing.Size(144, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Principal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,36 +116,18 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(353, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(542, 53);
+            this.panel7.Size = new System.Drawing.Size(542, 31);
             this.panel7.TabIndex = 1;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.btnPerfil);
+            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.Controls.Add(this.labelPerfil);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(231, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(311, 53);
+            this.panel8.Size = new System.Drawing.Size(311, 31);
             this.panel8.TabIndex = 0;
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.AutoSize = true;
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(157, 0);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(154, 53);
-            this.btnPerfil.TabIndex = 0;
-            this.btnPerfil.Text = "skeletorsfsfsdfsfsfd";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -146,13 +136,13 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(895, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(69, 53);
+            this.panel6.Size = new System.Drawing.Size(69, 31);
             this.panel6.TabIndex = 0;
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(4, 17);
+            this.btnMinimizar.Location = new System.Drawing.Point(4, 7);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(30, 18);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +153,7 @@
             // btnClose
             // 
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(37, 17);
+            this.btnClose.Location = new System.Drawing.Point(37, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(28, 18);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +172,7 @@
             // 
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 53);
+            this.panel3.Location = new System.Drawing.Point(0, 31);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(964, 47);
             this.panel3.TabIndex = 2;
@@ -210,9 +200,9 @@
             this.panel4.Controls.Add(this.btnAmigos);
             this.panel4.Controls.Add(this.btnPrincipal);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Location = new System.Drawing.Point(0, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 417);
+            this.panel4.Size = new System.Drawing.Size(200, 439);
             this.panel4.TabIndex = 3;
             // 
             // btnAmigos
@@ -242,17 +232,40 @@
             this.panelPrincipalContenido.Controls.Add(this.controlUsuarioPrincipalPrincipal1);
             this.panelPrincipalContenido.Controls.Add(this.controlUsuarioAmigosPrincipal1);
             this.panelPrincipalContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipalContenido.Location = new System.Drawing.Point(200, 100);
+            this.panelPrincipalContenido.Location = new System.Drawing.Point(200, 78);
             this.panelPrincipalContenido.Name = "panelPrincipalContenido";
-            this.panelPrincipalContenido.Size = new System.Drawing.Size(764, 417);
+            this.panelPrincipalContenido.Size = new System.Drawing.Size(764, 439);
             this.panelPrincipalContenido.TabIndex = 4;
+            // 
+            // labelPerfil
+            // 
+            this.labelPerfil.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelPerfil.Location = new System.Drawing.Point(273, 0);
+            this.labelPerfil.Name = "labelPerfil";
+            this.labelPerfil.Size = new System.Drawing.Size(38, 31);
+            this.labelPerfil.TabIndex = 0;
+            this.labelPerfil.Text = "label1";
+            this.labelPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelPerfil.Click += new System.EventHandler(this.labelPerfil_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(223, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // controlUsuarioPrincipalPrincipal1
             // 
             this.controlUsuarioPrincipalPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlUsuarioPrincipalPrincipal1.Location = new System.Drawing.Point(0, 0);
             this.controlUsuarioPrincipalPrincipal1.Name = "controlUsuarioPrincipalPrincipal1";
-            this.controlUsuarioPrincipalPrincipal1.Size = new System.Drawing.Size(764, 417);
+            this.controlUsuarioPrincipalPrincipal1.Size = new System.Drawing.Size(764, 439);
             this.controlUsuarioPrincipalPrincipal1.TabIndex = 1;
             // 
             // controlUsuarioAmigosPrincipal1
@@ -260,8 +273,34 @@
             this.controlUsuarioAmigosPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlUsuarioAmigosPrincipal1.Location = new System.Drawing.Point(0, 0);
             this.controlUsuarioAmigosPrincipal1.Name = "controlUsuarioAmigosPrincipal1";
-            this.controlUsuarioAmigosPrincipal1.Size = new System.Drawing.Size(764, 417);
+            this.controlUsuarioAmigosPrincipal1.Size = new System.Drawing.Size(764, 439);
             this.controlUsuarioAmigosPrincipal1.TabIndex = 0;
+            // 
+            // contextMenuPerfil
+            // 
+            this.contextMenuPerfil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verPerfilToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cerrarSesionToolStripMenuItem});
+            this.contextMenuPerfil.Name = "contextMenuPerfil";
+            this.contextMenuPerfil.Size = new System.Drawing.Size(143, 54);
+            // 
+            // verPerfilToolStripMenuItem
+            // 
+            this.verPerfilToolStripMenuItem.Name = "verPerfilToolStripMenuItem";
+            this.verPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verPerfilToolStripMenuItem.Text = "Ver perfil";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesión";
             // 
             // Principal
             // 
@@ -282,7 +321,6 @@
             this.panel10.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -291,6 +329,8 @@
             this.panel9.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panelPrincipalContenido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuPerfil.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,7 +347,6 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
@@ -317,5 +356,11 @@
         private System.Windows.Forms.Button btnAmigos;
         private ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal controlUsuarioAmigosPrincipal1;
         private ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal controlUsuarioPrincipalPrincipal1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelPerfil;
+        private System.Windows.Forms.ContextMenuStrip contextMenuPerfil;
+        private System.Windows.Forms.ToolStripMenuItem verPerfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }
