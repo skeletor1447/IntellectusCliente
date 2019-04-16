@@ -135,6 +135,12 @@
     <Compile Include="Views\ControlUsuario\Amigos\SolicitudPendiente\ControlUsuarioAmigosSolicitudPendientePrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioAmigosSolicitudPendientePrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.Designer.cs">
+      <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\SolicitudPendiente\ControlUsuarioAmigosSolicitudPendientePrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosSolicitudPendientePrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.resx">
+      <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.resx">
       <DependentUpon>ControlUsuarioPrincipalPrincipal.cs</DependentUpon>
