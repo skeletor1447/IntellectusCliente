@@ -37,6 +37,10 @@ namespace ClienteIntellectus.Views
             PrincipalPresentador.Inicializar(controlUsuarioPrincipalPrincipal1);
             PrincipalPresentador.AjustarLabelAlTexto(labelPerfil, PrincipalPresentador.GetNick());
 
+
+            //se asigna a los control de usuario principales el perfil del usuario
+            controlUsuarioPerfilPrincipal1.Perfil = Perfil;
+            controlUsuarioPerfilPrincipal1.ActualizarInformacion();
         }
         
 

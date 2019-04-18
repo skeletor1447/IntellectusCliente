@@ -13,6 +13,5 @@ namespace ClienteIntellectus.Views
         PerfilServicios.PerfilCompuesto  Perfil { get; set; }
         long IdCliente { get; set; }
         void MostrarMensajeUsuarioError(String mensaje);
-        
     }
 }
