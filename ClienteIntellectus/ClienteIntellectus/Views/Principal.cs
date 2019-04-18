@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClienteIntellectus.PerfilServicios;
 using ClienteIntellectus.UsuarioServicios;
 
 namespace ClienteIntellectus.Views
@@ -17,8 +18,9 @@ namespace ClienteIntellectus.Views
         
         public static  long ID { get; set; }
         public Socket ClienteSocket { get; set; }
-        public Usuario Usuario { get; set; }
+        
         public long IdCliente { get; set; }
+        public PerfilCompuesto Perfil { get; set ; }
 
         Presentador.PrincipalPresentador PrincipalPresentador;
 

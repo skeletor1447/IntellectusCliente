@@ -10,7 +10,7 @@ namespace ClienteIntellectus.Views
     public interface IPrincipal
     {
         Socket ClienteSocket { get; set; }
-        UsuarioServicios.Usuario Usuario { get; set; }
+        PerfilServicios.PerfilCompuesto  Perfil { get; set; }
         long IdCliente { get; set; }
         void MostrarMensajeUsuarioError(String mensaje);
         

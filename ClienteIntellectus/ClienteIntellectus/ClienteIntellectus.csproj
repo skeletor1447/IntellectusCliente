@@ -98,11 +98,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\PerfilServicios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\UsuarioServicios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Presentador\ControlUsuario\Perfil\InformacionPersonal\InformacionPersonalPresentador.cs" />
     <Compile Include="Presentador\LoginPresentador.cs" />
     <Compile Include="Presentador\PrincipalPresentador.cs" />
     <Compile Include="Presentador\RegistroPresentador.cs" />
@@ -148,6 +154,7 @@
     <Compile Include="Views\ControlUsuario\Perfil\InformacionPersonal\ControlUsuarioPerfilInformacionPersonal.Designer.cs">
       <DependentUpon>ControlUsuarioPerfilInformacionPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\InformacionPersonal\IInformacionPersonal.cs" />
     <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,6 +254,28 @@
     <None Include="Connected Services\AmigosServicios\ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PerfilServicios\ClienteIntellectus.PerfilServicios.ActualizarRespuestaOfPerfilCompuestoqYdlCAL1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PerfilServicios\ClienteIntellectus.PerfilServicios.UnicaRespuestaOfPerfilCompuestoqYdlCAL1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PerfilServicios\PerfilServices.wsdl" />
+    <None Include="Connected Services\PerfilServicios\PerfilServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerfilServicios\PerfilServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerfilServicios\PerfilServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerfilServicios\PerfilServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PerfilServicios\PerfilServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\UsuarioServicios\ClienteIntellectus.UsuarioServicios.InsertarRespuesta.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -291,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AmigosServicios\" />
+    <WCFMetadataStorage Include="Connected Services\PerfilServicios\" />
     <WCFMetadataStorage Include="Connected Services\UsuarioServicios\" />
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +353,20 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Connected Services\PerfilServicios\PerfilServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerfilServicios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerfilServicios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\PerfilServicios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -540,6 +540,12 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorCliente", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarSolicitudesPorClienteResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarSolicitudesPorClienteAsync(int idcliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarAmigos", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarAmigosResponse")]
+        ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1 ConsultarAmigos(int idcliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarAmigos", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarAmigosResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarAmigosAsync(int idcliente);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -607,6 +613,14 @@ namespace ClienteIntellectus.UsuarioServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarSolicitudesPorClienteAsync(int idcliente) {
             return base.Channel.ConsultarSolicitudesPorClienteAsync(idcliente);
+        }
+        
+        public ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1 ConsultarAmigos(int idcliente) {
+            return base.Channel.ConsultarAmigos(idcliente);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.MultipleRespuestaOfUsuarioAmistadqYdlCAL1> ConsultarAmigosAsync(int idcliente) {
+            return base.Channel.ConsultarAmigosAsync(idcliente);
         }
     }
 }

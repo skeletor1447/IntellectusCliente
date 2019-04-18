@@ -39,6 +39,12 @@
   <wsdl:message name="IAmigosServices_AceptarSolicitud_OutputMessage">
     <wsdl:part name="parameters" element="tns:AceptarSolicitudResponse" />
   </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarAmigos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAmigos" />
+  </wsdl:message>
+  <wsdl:message name="IAmigosServices_ConsultarAmigos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAmigosResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAmigosServices">
     <wsdl:operation name="SolicitudDeAmistad">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/SolicitudDeAmistad" message="tns:IAmigosServices_SolicitudDeAmistad_InputMessage" />
@@ -59,6 +65,10 @@
     <wsdl:operation name="AceptarSolicitud">
       <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/AceptarSolicitud" message="tns:IAmigosServices_AceptarSolicitud_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/AceptarSolicitudResponse" message="tns:IAmigosServices_AceptarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAmigos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarAmigos" message="tns:IAmigosServices_ConsultarAmigos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAmigosServices/ConsultarAmigosResponse" message="tns:IAmigosServices_ConsultarAmigos_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAmigosServices" type="tns:IAmigosServices">
@@ -101,6 +111,15 @@
     </wsdl:operation>
     <wsdl:operation name="AceptarSolicitud">
       <soap:operation soapAction="http://tempuri.org/IAmigosServices/AceptarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAmigos">
+      <soap:operation soapAction="http://tempuri.org/IAmigosServices/ConsultarAmigos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

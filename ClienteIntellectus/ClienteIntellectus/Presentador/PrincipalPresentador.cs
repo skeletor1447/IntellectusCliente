@@ -12,7 +12,8 @@ namespace ClienteIntellectus.Presentador
     {
         Views.IPrincipal iprincipal;
         Views.Principal principal;
-       UsuarioServicios.UsuarioServicesClient usuarioServiceClient;
+
+        PerfilServicios.PerfilServicesClient PerfilServicesClient;
 
         public PrincipalPresentador(Views.IPrincipal iprincipal, Views.Principal principal)
         {
@@ -24,7 +25,7 @@ namespace ClienteIntellectus.Presentador
         {
             try
             {
-                usuarioServiceClient = new UsuarioServicios.UsuarioServicesClient();
+                PerfilServicesClient = new PerfilServicios.PerfilServicesClient();
             }
             catch (Exception ex)
             {
@@ -33,11 +34,11 @@ namespace ClienteIntellectus.Presentador
 
             try
             {
-                UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 resultado = usuarioServiceClient.Consultar(iprincipal.IdCliente);
+                PerfilServicios.UnicaRespuestaOfPerfilCompuestoqYdlCAL1 resultado = PerfilServicesClient.ConsultarPerfilCompuesto(iprincipal.IdCliente);
 
                 if (!resultado.Error)
                 {
-                    iprincipal.Usuario = resultado.Entidad;
+                    iprincipal.Perfil = resultado.Entidad;
                 }
                 else
                 {
@@ -54,7 +55,7 @@ namespace ClienteIntellectus.Presentador
         
         public String GetNick()
         {
-            return iprincipal.Usuario.Nick;
+            return iprincipal.Perfil.Usuario.Nick;
         }
 
         public void AjustarLabelAlTexto(System.Windows.Forms.Label label,String texto)

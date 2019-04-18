@@ -72,4 +72,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ConsultarAmigos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="solicitante" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAmigosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria" minOccurs="0" name="ConsultarAmigosResult" nillable="true" type="q6:MultipleRespuestaOfSolicitudAmistadqYdlCAL1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

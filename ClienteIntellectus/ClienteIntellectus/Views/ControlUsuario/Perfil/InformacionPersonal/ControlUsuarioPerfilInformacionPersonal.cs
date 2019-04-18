@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Perfil.InformacionPersonal
 {
-    public partial class ControlUsuarioPerfilInformacionPersonal : UserControl
+    public partial class ControlUsuarioPerfilInformacionPersonal : UserControl, IInformacionPersonal
     {
         public ControlUsuarioPerfilInformacionPersonal()
         {

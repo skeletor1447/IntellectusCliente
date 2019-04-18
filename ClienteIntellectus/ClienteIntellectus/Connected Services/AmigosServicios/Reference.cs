@@ -479,6 +479,12 @@ namespace ClienteIntellectus.AmigosServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/AceptarSolicitud", ReplyAction="http://tempuri.org/IAmigosServices/AceptarSolicitudResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.ActualizarRespuestaOfSolicitudAmistadqYdlCAL1> AceptarSolicitudAsync(int idsolicitudamistad);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarAmigos", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarAmigosResponse")]
+        ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarAmigos(int solicitante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAmigosServices/ConsultarAmigos", ReplyAction="http://tempuri.org/IAmigosServices/ConsultarAmigosResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarAmigosAsync(int solicitante);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -546,6 +552,14 @@ namespace ClienteIntellectus.AmigosServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.ActualizarRespuestaOfSolicitudAmistadqYdlCAL1> AceptarSolicitudAsync(int idsolicitudamistad) {
             return base.Channel.AceptarSolicitudAsync(idsolicitudamistad);
+        }
+        
+        public ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1 ConsultarAmigos(int solicitante) {
+            return base.Channel.ConsultarAmigos(solicitante);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.AmigosServicios.MultipleRespuestaOfSolicitudAmistadqYdlCAL1> ConsultarAmigosAsync(int solicitante) {
+            return base.Channel.ConsultarAmigosAsync(solicitante);
         }
     }
 }
