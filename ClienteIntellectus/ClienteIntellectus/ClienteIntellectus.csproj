@@ -141,6 +141,12 @@
     <Compile Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\InformacionPersonal\ControlUsuarioPerfilInformacionPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\InformacionPersonal\ControlUsuarioPerfilInformacionPersonal.Designer.cs">
+      <DependentUpon>ControlUsuarioPerfilInformacionPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.resx">
       <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Perfil\InformacionPersonal\ControlUsuarioPerfilInformacionPersonal.resx">
+      <DependentUpon>ControlUsuarioPerfilInformacionPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Principal\ControlUsuarioPrincipalPrincipal.resx">
       <DependentUpon>ControlUsuarioPrincipalPrincipal.cs</DependentUpon>
@@ -312,5 +321,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

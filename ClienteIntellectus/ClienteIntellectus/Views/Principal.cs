@@ -33,6 +33,7 @@ namespace ClienteIntellectus.Views
             }
 
             CargarPerfil();
+            controlUsuarioPrincipalPrincipal1.BringToFront();
             
         }
 
@@ -87,6 +88,11 @@ namespace ClienteIntellectus.Views
         {
             Point point = new Point(labelPerfil.Width, labelPerfil.Height);
             contextMenuPerfil.Show(labelPerfil, point, ToolStripDropDownDirection.BelowLeft);
+        }
+
+        private void menuPerfilVerPerfil_Click(object sender, EventArgs e)
+        {
+            controlUsuarioPerfilPrincipal1.BringToFront();
         }
     }
 }
