@@ -8,65 +8,35 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClienteIntellectus.UsuarioServicios;
 
 namespace ClienteIntellectus.Views
 {
-    public partial class Principal : Form
+    public partial class Principal : Form, IPrincipal
     {
-        private Socket ClienteSocket { get; set; }
-        UsuarioServicios.Usuario usuario;
+        
         public static  long ID { get; set; }
-        UsuarioServicios.UsuarioServicesClient usuarioClient;
+        public Socket ClienteSocket { get; set; }
+        public Usuario Usuario { get; set; }
+        public long IdCliente { get; set; }
+
+        Presentador.PrincipalPresentador PrincipalPresentador;
+
         public Principal(Socket clienteSocket,long ID)
         {
             InitializeComponent();
             this.ClienteSocket = clienteSocket;
             Principal.ID = ID;
+            IdCliente = ID;
 
-            try
-            {
-                usuarioClient = new UsuarioServicios.UsuarioServicesClient();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            PrincipalPresentador = new Presentador.PrincipalPresentador(this, this);
 
-            CargarPerfil();
-            controlUsuarioPrincipalPrincipal1.BringToFront();
-            
+
+            PrincipalPresentador.Inicializar(controlUsuarioPrincipalPrincipal1);
+            PrincipalPresentador.AjustarLabelAlTexto(labelPerfil, PrincipalPresentador.GetNick());
+
         }
-
-
-        private void CargarPerfil()
-        {
-            try
-            {
-                UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 resultado = usuarioClient.Consultar(ID);
-
-                if (!resultado.Error)
-                {
-                    usuario = resultado.Entidad;
-
-                    labelPerfil.Text = usuario.Nick;
-
-                    using (Graphics g = CreateGraphics())
-                    {
-                        SizeF size = g.MeasureString(labelPerfil.Text, labelPerfil.Font, int.MaxValue);
-                        labelPerfil.Width = (int)Math.Ceiling(size.Width);
-                        labelPerfil.Text = labelPerfil.Text;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(resultado.Errores["Error"]);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -93,6 +63,16 @@ namespace ClienteIntellectus.Views
         private void menuPerfilVerPerfil_Click(object sender, EventArgs e)
         {
             controlUsuarioPerfilPrincipal1.BringToFront();
+        }
+
+        public void MostrarMensajeUsuarioError(string mensaje)
+        {
+            MessageBox.Show(mensaje);
+        }
+
+        private void menuPerfilCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

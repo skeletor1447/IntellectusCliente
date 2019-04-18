@@ -52,7 +52,7 @@
             this.contextMenuPerfil = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuPerfilVerPerfil = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPerfilCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.controlUsuarioPerfilPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Perfil.ControlUsuarioPerfilPrincipal();
             this.controlUsuarioPrincipalPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal();
             this.controlUsuarioAmigosPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal();
@@ -267,27 +267,28 @@
             this.contextMenuPerfil.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuPerfilVerPerfil,
             this.toolStripSeparator1,
-            this.cerrarSesionToolStripMenuItem});
+            this.menuPerfilCerrarSesion});
             this.contextMenuPerfil.Name = "contextMenuPerfil";
-            this.contextMenuPerfil.Size = new System.Drawing.Size(181, 76);
+            this.contextMenuPerfil.Size = new System.Drawing.Size(143, 54);
             // 
             // menuPerfilVerPerfil
             // 
             this.menuPerfilVerPerfil.Name = "menuPerfilVerPerfil";
-            this.menuPerfilVerPerfil.Size = new System.Drawing.Size(180, 22);
+            this.menuPerfilVerPerfil.Size = new System.Drawing.Size(142, 22);
             this.menuPerfilVerPerfil.Text = "Ver perfil";
             this.menuPerfilVerPerfil.Click += new System.EventHandler(this.menuPerfilVerPerfil_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(139, 6);
             // 
-            // cerrarSesionToolStripMenuItem
+            // menuPerfilCerrarSesion
             // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesión";
+            this.menuPerfilCerrarSesion.Name = "menuPerfilCerrarSesion";
+            this.menuPerfilCerrarSesion.Size = new System.Drawing.Size(142, 22);
+            this.menuPerfilCerrarSesion.Text = "Cerrar sesión";
+            this.menuPerfilCerrarSesion.Click += new System.EventHandler(this.menuPerfilCerrarSesion_Click);
             // 
             // controlUsuarioPerfilPrincipal1
             // 
@@ -368,11 +369,11 @@
         private ControlUsuario.Amigos.ControlUsuarioAmigosPrincipal controlUsuarioAmigosPrincipal1;
         private ControlUsuario.Principal.ControlUsuarioPrincipalPrincipal controlUsuarioPrincipalPrincipal1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelPerfil;
         private System.Windows.Forms.ContextMenuStrip contextMenuPerfil;
         private System.Windows.Forms.ToolStripMenuItem menuPerfilVerPerfil;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuPerfilCerrarSesion;
         private ControlUsuario.Perfil.ControlUsuarioPerfilPrincipal controlUsuarioPerfilPrincipal1;
+        public System.Windows.Forms.Label labelPerfil;
     }
 }
