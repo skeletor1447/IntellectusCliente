@@ -14,5 +14,7 @@ namespace ClienteIntellectus.Presentador.ControlUsuario.Perfil.InformacionPerson
         {
             this.InformacionPersonal = informacionPersonal;
         }
+
+        
     }
 }

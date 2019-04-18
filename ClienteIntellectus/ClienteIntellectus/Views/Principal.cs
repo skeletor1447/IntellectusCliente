@@ -41,6 +41,7 @@ namespace ClienteIntellectus.Views
             //se asigna a los control de usuario principales el perfil del usuario
            
             controlUsuarioPerfilPrincipal1.ActualizarInformacion();
+            
         }
         
 

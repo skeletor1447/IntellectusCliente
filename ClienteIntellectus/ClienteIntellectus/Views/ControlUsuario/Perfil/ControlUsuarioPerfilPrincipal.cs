@@ -31,6 +31,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
         {
             controlUsuarioPerfilInformacionPersonal1.BringToFront();
             ActualizarInformacion();
+            controlUsuarioPerfilInformacionPersonal1.ActualizarInformacion();
         }
 
         public void ActualizarInformacion()
@@ -46,6 +47,9 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
             labelNick.Text = ClienteIntellectus.Views.Principal.Perfil.Usuario.Nick;
             labelInstitucion.Text = "";
             labelDescripcion.Text = ClienteIntellectus.Views.Principal.Perfil.Perfil.Descripcion;
+
+
+            controlUsuarioPerfilInformacionPersonal1.ActualizarInformacion();
         }
 
         private void btnCambiarAvatar_Click(object sender, EventArgs e)

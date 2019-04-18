@@ -90,6 +90,7 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Enabled = false;
             this.txtCorreo.Location = new System.Drawing.Point(171, 38);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(323, 20);
@@ -97,6 +98,7 @@
             // 
             // txtNick
             // 
+            this.txtNick.Enabled = false;
             this.txtNick.Location = new System.Drawing.Point(171, 86);
             this.txtNick.Name = "txtNick";
             this.txtNick.Size = new System.Drawing.Size(323, 20);
