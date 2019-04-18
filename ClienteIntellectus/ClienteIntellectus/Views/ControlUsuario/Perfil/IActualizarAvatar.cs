@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,13 +9,9 @@ using System.Threading.Tasks;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Perfil
 {
-    public interface IPerfilPrincipal
+    public interface IActualizarAvatar
     {
-        Image Avatar { get; set; } 
-        Image ImagenInstitucion { get; set; }
-        String Nick { get; set; }
-        String Institucion { get; set; }
-        String Descripcion { get; set; }
+        Image Avatar { get; set; }
         
         void MostrarMensajeUsuarioError(String mensaje);
     }

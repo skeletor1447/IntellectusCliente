@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClienteIntellectus.PerfilServicios;
+using System.IO;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Perfil
 {
@@ -23,7 +24,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
         public string Nick { get; set; }
         public string Institucion { get; set; }
         public string Descripcion { get; set; }
-        public PerfilCompuesto Perfil { get; set; }
+        
         public Image ImagenInstitucion { get; set; }
 
         private void btnInformacionPersonal_Click(object sender, EventArgs e)
@@ -34,11 +35,28 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
 
         public void ActualizarInformacion()
         {
-            picturePerfil.Image = Avatar;
+            using (var ms = new MemoryStream(ClienteIntellectus.Views.Principal.Perfil.Perfil.Avatar))
+            {
+                Avatar = Image.FromStream(ms);
+
+                picturePerfil.Image = Avatar;
+            }
+            
             pictureInstitucion.Image = ImagenInstitucion;
-            labelNick.Text = Perfil.Usuario.Nick;
+            labelNick.Text = ClienteIntellectus.Views.Principal.Perfil.Usuario.Nick;
             labelInstitucion.Text = "";
-            labelDescripcion.Text = Perfil.Perfil.Descripcion;
+            labelDescripcion.Text = ClienteIntellectus.Views.Principal.Perfil.Perfil.Descripcion;
+        }
+
+        private void btnCambiarAvatar_Click(object sender, EventArgs e)
+        {
+            ActualizarAvatar actualizarAvatar = new ActualizarAvatar(this);
+            actualizarAvatar.ShowDialog();
+        }
+
+        public void MostrarMensajeUsuarioError(string mensaje)
+        {
+            MessageBox.Show(mensaje);
         }
     }
 }

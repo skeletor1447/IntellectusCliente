@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelInformacionCorta = new System.Windows.Forms.Panel();
+            this.btnCambiarAvatar = new System.Windows.Forms.Button();
             this.labelInstitucion = new System.Windows.Forms.Label();
             this.pictureInstitucion = new System.Windows.Forms.PictureBox();
             this.labelDescripcion = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnInformacionPersonal = new System.Windows.Forms.Button();
             this.panelPerfilLibre = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.controlUsuarioPerfilInformacionPersonal1 = new ClienteIntellectus.Views.ControlUsuario.Perfil.InformacionPersonal.ControlUsuarioPerfilInformacionPersonal();
             this.panelInformacionCorta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureInstitucion)).BeginInit();
@@ -52,7 +52,7 @@
             // 
             // panelInformacionCorta
             // 
-            this.panelInformacionCorta.Controls.Add(this.button6);
+            this.panelInformacionCorta.Controls.Add(this.btnCambiarAvatar);
             this.panelInformacionCorta.Controls.Add(this.labelInstitucion);
             this.panelInformacionCorta.Controls.Add(this.pictureInstitucion);
             this.panelInformacionCorta.Controls.Add(this.labelDescripcion);
@@ -63,6 +63,17 @@
             this.panelInformacionCorta.Name = "panelInformacionCorta";
             this.panelInformacionCorta.Size = new System.Drawing.Size(602, 140);
             this.panelInformacionCorta.TabIndex = 0;
+            // 
+            // btnCambiarAvatar
+            // 
+            this.btnCambiarAvatar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarAvatar.Location = new System.Drawing.Point(55, 102);
+            this.btnCambiarAvatar.Name = "btnCambiarAvatar";
+            this.btnCambiarAvatar.Size = new System.Drawing.Size(100, 23);
+            this.btnCambiarAvatar.TabIndex = 5;
+            this.btnCambiarAvatar.Text = "Cambiar";
+            this.btnCambiarAvatar.UseVisualStyleBackColor = true;
+            this.btnCambiarAvatar.Click += new System.EventHandler(this.btnCambiarAvatar_Click);
             // 
             // labelInstitucion
             // 
@@ -105,6 +116,7 @@
             this.picturePerfil.Location = new System.Drawing.Point(55, 13);
             this.picturePerfil.Name = "picturePerfil";
             this.picturePerfil.Size = new System.Drawing.Size(100, 82);
+            this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picturePerfil.TabIndex = 0;
             this.picturePerfil.TabStop = false;
             // 
@@ -181,16 +193,6 @@
             this.panelPerfilLibre.Size = new System.Drawing.Size(602, 287);
             this.panelPerfilLibre.TabIndex = 2;
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(55, 102);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Cambiar";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // controlUsuarioPerfilInformacionPersonal1
             // 
             this.controlUsuarioPerfilInformacionPersonal1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -233,7 +235,7 @@
         private System.Windows.Forms.Button btnInformacionPersonal;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCambiarAvatar;
         private InformacionPersonal.ControlUsuarioPerfilInformacionPersonal controlUsuarioPerfilInformacionPersonal1;
     }
 }

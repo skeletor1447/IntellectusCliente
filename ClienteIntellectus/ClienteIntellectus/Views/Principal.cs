@@ -20,7 +20,7 @@ namespace ClienteIntellectus.Views
         public Socket ClienteSocket { get; set; }
         
         public long IdCliente { get; set; }
-        public PerfilCompuesto Perfil { get; set ; }
+        static public PerfilCompuesto Perfil { get; set ; }
 
         Presentador.PrincipalPresentador PrincipalPresentador;
 
@@ -39,7 +39,7 @@ namespace ClienteIntellectus.Views
 
 
             //se asigna a los control de usuario principales el perfil del usuario
-            controlUsuarioPerfilPrincipal1.Perfil = Perfil;
+           
             controlUsuarioPerfilPrincipal1.ActualizarInformacion();
         }
         

@@ -38,7 +38,7 @@ namespace ClienteIntellectus.Presentador
 
                 if (!resultado.Error)
                 {
-                    iprincipal.Perfil = resultado.Entidad;
+                    ClienteIntellectus.Views.Principal.Perfil = resultado.Entidad;
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace ClienteIntellectus.Presentador
         
         public String GetNick()
         {
-            return iprincipal.Perfil.Usuario.Nick;
+            return ClienteIntellectus.Views.Principal.Perfil.Usuario.Nick;
         }
 
         public void AjustarLabelAlTexto(System.Windows.Forms.Label label,String texto)

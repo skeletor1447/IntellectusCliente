@@ -108,6 +108,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Presentador\ControlUsuario\Perfil\ActualizarAvatarPresentador.cs" />
     <Compile Include="Presentador\ControlUsuario\Perfil\InformacionPersonal\InformacionPersonalPresentador.cs" />
     <Compile Include="Presentador\ControlUsuario\Perfil\PerfilPrincipalPresentador.cs" />
     <Compile Include="Presentador\LoginPresentador.cs" />
@@ -143,12 +144,19 @@
     <Compile Include="Views\ControlUsuario\Amigos\SolicitudPendiente\ControlUsuarioAmigosSolicitudPendientePrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioAmigosSolicitudPendientePrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\ActualizarAvatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\ActualizarAvatar.Designer.cs">
+      <DependentUpon>ActualizarAvatar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Perfil\IActualizarAvatar.cs" />
     <Compile Include="Views\ControlUsuario\Perfil\InformacionPersonal\ControlUsuarioPerfilInformacionPersonal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\SolicitudPendiente\ControlUsuarioAmigosSolicitudPendientePrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosSolicitudPendientePrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Perfil\ActualizarAvatar.resx">
+      <DependentUpon>ActualizarAvatar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Perfil\ControlUsuarioPerfilPrincipal.resx">
       <DependentUpon>ControlUsuarioPerfilPrincipal.cs</DependentUpon>
