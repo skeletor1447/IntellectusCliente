@@ -43,6 +43,13 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
                 Avatar = Image.FromStream(ms);
 
                 picturePerfil.Image = Avatar;
+
+                Control control = this.Parent; //panelPrincipalContenido
+                control = control.Parent; //principal
+
+
+                if (control is Views.Principal)
+                    (control as Views.Principal).pictureAvatar.Image = Avatar;
             }
             
             pictureInstitucion.Image = ImagenInstitucion;
@@ -52,6 +59,8 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
 
 
             controlUsuarioPerfilInformacionPersonal1.ActualizarInformacion();
+
+            
         }
 
         private void btnCambiarAvatar_Click(object sender, EventArgs e)

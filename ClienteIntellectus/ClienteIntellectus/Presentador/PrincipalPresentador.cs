@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -39,6 +40,14 @@ namespace ClienteIntellectus.Presentador
                 if (!resultado.Error)
                 {
                     ClienteIntellectus.Views.Principal.Perfil = resultado.Entidad;
+
+                    using (var ms = new MemoryStream(ClienteIntellectus.Views.Principal.Perfil.Perfil.Avatar))
+                    {
+                        principal.pictureAvatar.Image = Image.FromStream(ms);
+                        
+                    }
+                   
+                   
                 }
                 else
                 {

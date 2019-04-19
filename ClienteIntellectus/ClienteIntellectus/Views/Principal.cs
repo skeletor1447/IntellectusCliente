@@ -81,5 +81,10 @@ namespace ClienteIntellectus.Views
         {
             Application.Restart();
         }
+
+        private void menuPerfilSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

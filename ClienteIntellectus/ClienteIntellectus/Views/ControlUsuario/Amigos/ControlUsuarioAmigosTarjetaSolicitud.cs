@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClienteIntellectus.Views.ControlUsuario.Amigos.AgregarAmigos;
+using System.IO;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 {
@@ -21,6 +22,19 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             this.UsuarioAmistad = usuarioAmistad;
             this.labelNick.Text = usuarioAmistad.Usuario.Nick;
             this.padre = padre;
+
+            Control control = padre.Parent;
+            control = control.Parent;
+            control = control.Parent;
+            control = control.Parent;
+            
+            if(control is Views.Principal)
+            {
+                using (var ms = new MemoryStream(ClienteIntellectus.Views.Principal.Perfil.Perfil.Avatar))
+                {
+                    picturePerfil.Image = Image.FromStream(ms);
+                }
+            }
 
             if(usuarioAmistad.SolicitudAmistad != null)
             {
