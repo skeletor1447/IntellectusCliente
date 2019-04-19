@@ -15,6 +15,32 @@ namespace ClienteIntellectus.Presentador.ControlUsuario.Perfil.InformacionPerson
             this.InformacionPersonal = informacionPersonal;
         }
 
-        
+        public void GuardarCambios()
+        {
+            try
+            {
+                PerfilServicios.PerfilServicesClient perfilServicesClient = new PerfilServicios.PerfilServicesClient();
+
+                ClienteIntellectus.Views.Principal.Perfil.Perfil.NombreReal = InformacionPersonal.NombreReal;
+                ClienteIntellectus.Views.Principal.Perfil.Perfil.Descripcion = InformacionPersonal.Descripcion;
+
+                PerfilServicios.ActualizarRespuestaOfPerfilCompuestoqYdlCAL1 respuesta = perfilServicesClient.ActualizarPerfilCompuesto(ClienteIntellectus.Views.Principal.Perfil);
+
+                if(!respuesta.Error)
+                {
+                    ClienteIntellectus.Views.Principal.Perfil = respuesta.Entidad;
+                }
+                else
+                {
+                    InformacionPersonal.MostrarMensajeUsuarioError(respuesta.Errores["Error"]);
+                }
+
+
+            }
+            catch (Exception es)
+            {
+                InformacionPersonal.MostrarMensajeUsuarioError(es.Message);
+            }
+        }
     }
 }

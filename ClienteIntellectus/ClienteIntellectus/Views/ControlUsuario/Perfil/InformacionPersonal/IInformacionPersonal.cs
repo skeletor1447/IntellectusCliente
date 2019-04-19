@@ -12,5 +12,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil.InformacionPersonal
         String Nick { get; set; }
         String NombreReal { get; set; }
         String Descripcion { get; set; }
+
+        void MostrarMensajeUsuarioError(String mensaje);
     }
 }

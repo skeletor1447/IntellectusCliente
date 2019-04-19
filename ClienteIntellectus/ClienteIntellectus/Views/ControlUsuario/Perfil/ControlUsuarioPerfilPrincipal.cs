@@ -14,18 +14,20 @@ namespace ClienteIntellectus.Views.ControlUsuario.Perfil
 {
     public partial class ControlUsuarioPerfilPrincipal : UserControl, IPerfilPrincipal
     {
+
+        public Image Avatar { get; set; }
+        public string Nick { get; set; }
+        public string Institucion { get; set; }
+        public string Descripcion { get; set; }
+
+        public Image ImagenInstitucion { get; set; }
         public ControlUsuarioPerfilPrincipal()
         {
             InitializeComponent();
             controlUsuarioPerfilInformacionPersonal1.BringToFront();
         }
 
-        public Image Avatar { get; set; }
-        public string Nick { get; set; }
-        public string Institucion { get; set; }
-        public string Descripcion { get; set; }
-        
-        public Image ImagenInstitucion { get; set; }
+       
 
         private void btnInformacionPersonal_Click(object sender, EventArgs e)
         {

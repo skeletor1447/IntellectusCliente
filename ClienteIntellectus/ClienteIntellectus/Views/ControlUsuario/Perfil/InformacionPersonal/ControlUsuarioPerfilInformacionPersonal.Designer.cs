@@ -87,6 +87,7 @@
             this.btnGurdarCambios.TabIndex = 4;
             this.btnGurdarCambios.Text = "Guardar cambios";
             this.btnGurdarCambios.UseVisualStyleBackColor = true;
+            this.btnGurdarCambios.Click += new System.EventHandler(this.btnGurdarCambios_Click);
             // 
             // txtCorreo
             // 
