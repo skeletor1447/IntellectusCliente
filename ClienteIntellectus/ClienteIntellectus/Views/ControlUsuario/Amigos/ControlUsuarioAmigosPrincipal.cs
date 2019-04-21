@@ -64,5 +64,10 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             }
 
         }
+
+        public void ActualizarListaAmigos()
+        {
+
+        }
     }
 }

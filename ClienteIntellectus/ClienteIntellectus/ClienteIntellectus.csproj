@@ -132,6 +132,12 @@
     <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.Designer.cs">
       <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaAmigos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaAmigos.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosTarjetaAmigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaSolicitud.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaAmigos.resx">
+      <DependentUpon>ControlUsuarioAmigosTarjetaAmigos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosTarjetaSolicitud.resx">
       <DependentUpon>ControlUsuarioAmigosTarjetaSolicitud.cs</DependentUpon>
