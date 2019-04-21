@@ -511,11 +511,11 @@ namespace ClienteIntellectus.UsuarioServicios {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UsuarioServicios.IUsuarioServices")]
     public interface IUsuarioServices {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPasswordResponse")]
-        ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 ConsultarPorCorreoYPassword(string correo, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPassword", ReplyAction="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPasswordResponse")]
+        ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 LoguearPorCorreoYPassword(string correo, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword", ReplyAction="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPasswordResponse")]
-        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarPorCorreoYPasswordAsync(string correo, string password);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPassword", ReplyAction="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPasswordResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> LoguearPorCorreoYPasswordAsync(string correo, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuarioServices/Registrar", ReplyAction="http://tempuri.org/IUsuarioServices/RegistrarResponse")]
         ClienteIntellectus.UsuarioServicios.InsertarRespuesta Registrar(ClienteIntellectus.UsuarioServicios.Usuario usuario);
@@ -575,12 +575,12 @@ namespace ClienteIntellectus.UsuarioServicios {
                 base(binding, remoteAddress) {
         }
         
-        public ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 ConsultarPorCorreoYPassword(string correo, string password) {
-            return base.Channel.ConsultarPorCorreoYPassword(correo, password);
+        public ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 LoguearPorCorreoYPassword(string correo, string password) {
+            return base.Channel.LoguearPorCorreoYPassword(correo, password);
         }
         
-        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> ConsultarPorCorreoYPasswordAsync(string correo, string password) {
-            return base.Channel.ConsultarPorCorreoYPasswordAsync(correo, password);
+        public System.Threading.Tasks.Task<ClienteIntellectus.UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1> LoguearPorCorreoYPasswordAsync(string correo, string password) {
+            return base.Channel.LoguearPorCorreoYPasswordAsync(correo, password);
         }
         
         public ClienteIntellectus.UsuarioServicios.InsertarRespuesta Registrar(ClienteIntellectus.UsuarioServicios.Usuario usuario) {

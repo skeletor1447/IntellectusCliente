@@ -9,11 +9,11 @@
       <xsd:import schemaLocation="http://localhost:56251/Services/UsuarioServices.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IUsuarioServices_ConsultarPorCorreoYPassword_InputMessage">
-    <wsdl:part name="parameters" element="tns:ConsultarPorCorreoYPassword" />
+  <wsdl:message name="IUsuarioServices_LoguearPorCorreoYPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoguearPorCorreoYPassword" />
   </wsdl:message>
-  <wsdl:message name="IUsuarioServices_ConsultarPorCorreoYPassword_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ConsultarPorCorreoYPasswordResponse" />
+  <wsdl:message name="IUsuarioServices_LoguearPorCorreoYPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoguearPorCorreoYPasswordResponse" />
   </wsdl:message>
   <wsdl:message name="IUsuarioServices_Registrar_InputMessage">
     <wsdl:part name="parameters" element="tns:Registrar" />
@@ -46,9 +46,9 @@
     <wsdl:part name="parameters" element="tns:ConsultarAmigosResponse" />
   </wsdl:message>
   <wsdl:portType name="IUsuarioServices">
-    <wsdl:operation name="ConsultarPorCorreoYPassword">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword" message="tns:IUsuarioServices_ConsultarPorCorreoYPassword_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPasswordResponse" message="tns:IUsuarioServices_ConsultarPorCorreoYPassword_OutputMessage" />
+    <wsdl:operation name="LoguearPorCorreoYPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPassword" message="tns:IUsuarioServices_LoguearPorCorreoYPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPasswordResponse" message="tns:IUsuarioServices_LoguearPorCorreoYPassword_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Registrar">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioServices/Registrar" message="tns:IUsuarioServices_Registrar_InputMessage" />
@@ -73,8 +73,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuarioServices" type="tns:IUsuarioServices">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="ConsultarPorCorreoYPassword">
-      <soap:operation soapAction="http://tempuri.org/IUsuarioServices/ConsultarPorCorreoYPassword" style="document" />
+    <wsdl:operation name="LoguearPorCorreoYPassword">
+      <soap:operation soapAction="http://tempuri.org/IUsuarioServices/LoguearPorCorreoYPassword" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

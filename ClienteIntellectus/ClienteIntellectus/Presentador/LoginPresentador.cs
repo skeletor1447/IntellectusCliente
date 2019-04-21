@@ -79,7 +79,7 @@ namespace ClienteIntellectus.Presentador
             {
                 UsuarioServicios.UsuarioServicesClient usuarioServicesClient = new UsuarioServicios.UsuarioServicesClient();
 
-                UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 respuesta = usuarioServicesClient.ConsultarPorCorreoYPassword(ilogin.Correo, ilogin.Password);
+                UsuarioServicios.UnicaRespuestaOfUsuarioqYdlCAL1 respuesta = usuarioServicesClient.LoguearPorCorreoYPassword(ilogin.Correo, ilogin.Password);
 
                 if(!respuesta.Error)
                 {
