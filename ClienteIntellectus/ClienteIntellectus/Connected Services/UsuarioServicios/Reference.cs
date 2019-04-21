@@ -347,6 +347,9 @@ namespace ClienteIntellectus.UsuarioServicios {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] AvatarField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<bool> EsSolicitanteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -362,6 +365,19 @@ namespace ClienteIntellectus.UsuarioServicios {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Avatar {
+            get {
+                return this.AvatarField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AvatarField, value) != true)) {
+                    this.AvatarField = value;
+                    this.RaisePropertyChanged("Avatar");
+                }
             }
         }
         

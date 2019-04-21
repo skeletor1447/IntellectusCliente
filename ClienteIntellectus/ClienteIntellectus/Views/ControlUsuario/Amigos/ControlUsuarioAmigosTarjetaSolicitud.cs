@@ -27,13 +27,30 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             control = control.Parent;
             control = control.Parent;
             control = control.Parent;
-            
-            if(control is Views.Principal)
+
+            try
             {
-                using (var ms = new MemoryStream(ClienteIntellectus.Views.Principal.Perfil.Perfil.Avatar))
+                if (control is Views.Principal)
                 {
-                    picturePerfil.Image = Image.FromStream(ms);
+                    if (usuarioAmistad.Usuario.ID == ClienteIntellectus.Views.Principal.ID)
+                    {
+                        using (var ms = new MemoryStream(ClienteIntellectus.Views.Principal.Perfil.Perfil.Avatar))
+                        {
+                            picturePerfil.Image = Image.FromStream(ms);
+                        }
+                    }
+                    else
+                    {
+                        using (var ms = new MemoryStream(usuarioAmistad.Avatar))
+                        {
+                            picturePerfil.Image = Image.FromStream(ms);
+                        }
+                    }
                 }
+            }
+            catch(Exception es)
+            {
+                MessageBox.Show("Error de imagen");
             }
 
             if(usuarioAmistad.SolicitudAmistad != null)
@@ -69,6 +86,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 {
                     btnAgregar.Text = "Eliminar amigo";
                     btnCancelar.Visible = false;
+
                 }
             }
             else

@@ -494,6 +494,83 @@ namespace ClienteIntellectus.PerfilServicios {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MultipleRespuestaOfPerfilCompuestoqYdlCAL1", Namespace="http://schemas.datacontract.org/2004/07/WCFIntellectus.Utileria")]
+    [System.SerializableAttribute()]
+    public partial class MultipleRespuestaOfPerfilCompuestoqYdlCAL1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ClienteIntellectus.PerfilServicios.PerfilCompuesto[] EntidadesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.Dictionary<string, string> ErroresField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ClienteIntellectus.PerfilServicios.PerfilCompuesto[] Entidades {
+            get {
+                return this.EntidadesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntidadesField, value) != true)) {
+                    this.EntidadesField = value;
+                    this.RaisePropertyChanged("Entidades");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Error {
+            get {
+                return this.ErrorField;
+            }
+            set {
+                if ((this.ErrorField.Equals(value) != true)) {
+                    this.ErrorField = value;
+                    this.RaisePropertyChanged("Error");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.Dictionary<string, string> Errores {
+            get {
+                return this.ErroresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErroresField, value) != true)) {
+                    this.ErroresField = value;
+                    this.RaisePropertyChanged("Errores");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PerfilServicios.IPerfilServices")]
     public interface IPerfilServices {
@@ -509,6 +586,12 @@ namespace ClienteIntellectus.PerfilServicios {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerfilServices/ActualizarPerfilCompuesto", ReplyAction="http://tempuri.org/IPerfilServices/ActualizarPerfilCompuestoResponse")]
         System.Threading.Tasks.Task<ClienteIntellectus.PerfilServicios.ActualizarRespuestaOfPerfilCompuestoqYdlCAL1> ActualizarPerfilCompuestoAsync(ClienteIntellectus.PerfilServicios.PerfilCompuesto perfilCompuesto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuesto", ReplyAction="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuestoResponse")]
+        ClienteIntellectus.PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1 ObtenerListaAmigosPerfilCompuesto(long idCliente);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuesto", ReplyAction="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuestoResponse")]
+        System.Threading.Tasks.Task<ClienteIntellectus.PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1> ObtenerListaAmigosPerfilCompuestoAsync(long idCliente);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -552,6 +635,14 @@ namespace ClienteIntellectus.PerfilServicios {
         
         public System.Threading.Tasks.Task<ClienteIntellectus.PerfilServicios.ActualizarRespuestaOfPerfilCompuestoqYdlCAL1> ActualizarPerfilCompuestoAsync(ClienteIntellectus.PerfilServicios.PerfilCompuesto perfilCompuesto) {
             return base.Channel.ActualizarPerfilCompuestoAsync(perfilCompuesto);
+        }
+        
+        public ClienteIntellectus.PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1 ObtenerListaAmigosPerfilCompuesto(long idCliente) {
+            return base.Channel.ObtenerListaAmigosPerfilCompuesto(idCliente);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteIntellectus.PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1> ObtenerListaAmigosPerfilCompuestoAsync(long idCliente) {
+            return base.Channel.ObtenerListaAmigosPerfilCompuestoAsync(idCliente);
         }
     }
 }

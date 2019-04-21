@@ -29,4 +29,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="ArrayOfPerfilCompuesto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerfilCompuesto" nillable="true" type="tns:PerfilCompuesto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfilCompuesto" nillable="true" type="tns:ArrayOfPerfilCompuesto" />
 </xs:schema>

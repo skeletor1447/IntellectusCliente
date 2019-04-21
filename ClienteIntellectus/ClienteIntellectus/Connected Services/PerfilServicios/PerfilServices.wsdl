@@ -21,6 +21,12 @@
   <wsdl:message name="IPerfilServices_ActualizarPerfilCompuesto_OutputMessage">
     <wsdl:part name="parameters" element="tns:ActualizarPerfilCompuestoResponse" />
   </wsdl:message>
+  <wsdl:message name="IPerfilServices_ObtenerListaAmigosPerfilCompuesto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaAmigosPerfilCompuesto" />
+  </wsdl:message>
+  <wsdl:message name="IPerfilServices_ObtenerListaAmigosPerfilCompuesto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaAmigosPerfilCompuestoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPerfilServices">
     <wsdl:operation name="ConsultarPerfilCompuesto">
       <wsdl:input wsaw:Action="http://tempuri.org/IPerfilServices/ConsultarPerfilCompuesto" message="tns:IPerfilServices_ConsultarPerfilCompuesto_InputMessage" />
@@ -29,6 +35,10 @@
     <wsdl:operation name="ActualizarPerfilCompuesto">
       <wsdl:input wsaw:Action="http://tempuri.org/IPerfilServices/ActualizarPerfilCompuesto" message="tns:IPerfilServices_ActualizarPerfilCompuesto_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPerfilServices/ActualizarPerfilCompuestoResponse" message="tns:IPerfilServices_ActualizarPerfilCompuesto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaAmigosPerfilCompuesto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuesto" message="tns:IPerfilServices_ObtenerListaAmigosPerfilCompuesto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuestoResponse" message="tns:IPerfilServices_ObtenerListaAmigosPerfilCompuesto_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPerfilServices" type="tns:IPerfilServices">
@@ -44,6 +54,15 @@
     </wsdl:operation>
     <wsdl:operation name="ActualizarPerfilCompuesto">
       <soap:operation soapAction="http://tempuri.org/IPerfilServices/ActualizarPerfilCompuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaAmigosPerfilCompuesto">
+      <soap:operation soapAction="http://tempuri.org/IPerfilServices/ObtenerListaAmigosPerfilCompuesto" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

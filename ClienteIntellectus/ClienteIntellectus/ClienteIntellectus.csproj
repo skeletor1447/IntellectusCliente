@@ -208,6 +208,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\AgregarAmigos\ControlUsuarioAmigosAgregarAmigosPrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosAgregarAmigosPrincipal.cs</DependentUpon>
@@ -277,6 +278,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PerfilServicios\ClienteIntellectus.PerfilServicios.ActualizarRespuestaOfPerfilCompuestoqYdlCAL1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PerfilServicios\ClienteIntellectus.PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PerfilServicios\ClienteIntellectus.PerfilServicios.UnicaRespuestaOfPerfilCompuestoqYdlCAL1.datasource">
@@ -389,6 +393,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-avatar-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

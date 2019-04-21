@@ -17,6 +17,7 @@
   <xs:element name="ArrayOfUsuarioAmistad" nillable="true" type="tns:ArrayOfUsuarioAmistad" />
   <xs:complexType name="UsuarioAmistad">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Avatar" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="EsSolicitante" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="SolicitudAmistad" nillable="true" type="tns:SolicitudAmistad" />
       <xs:element minOccurs="0" name="Usuario" nillable="true" type="tns:Usuario" />
