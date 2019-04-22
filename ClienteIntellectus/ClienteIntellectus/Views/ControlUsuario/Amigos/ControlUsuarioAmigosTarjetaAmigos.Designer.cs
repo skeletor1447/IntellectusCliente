@@ -72,7 +72,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ControlUsuarioAmigosTarjetaAmigos";
-            this.Size = new System.Drawing.Size(253, 53);
+            this.Size = new System.Drawing.Size(247, 53);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

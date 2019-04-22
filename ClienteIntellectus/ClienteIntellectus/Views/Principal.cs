@@ -59,6 +59,7 @@ namespace ClienteIntellectus.Views
         {
             controlUsuarioAmigosPrincipal1.BringToFront();
             controlUsuarioAmigosPrincipal1.controlUsuarioAmigosChatChat1.BringToFront();
+            controlUsuarioAmigosPrincipal1.ActualizarListaAmigos();
         }
 
         private void labelPerfil_Click(object sender, EventArgs e)

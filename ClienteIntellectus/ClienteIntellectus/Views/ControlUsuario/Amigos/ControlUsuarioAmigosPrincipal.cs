@@ -20,15 +20,18 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
         private void btnAgregarAmigos_Click(object sender, EventArgs e)
         {
             controlUsuarioAmigosAgregarAmigosPrincipal1.BringToFront();
+            ActualizarListaAmigos();
         }
 
         private void btnChat_Click(object sender, EventArgs e)
         {
             controlUsuarioAmigosChatChat1.BringToFront();
+            ActualizarListaAmigos();
         }
 
         public void btnSolicitudPendiente_Click(object sender, EventArgs e)
         {
+            ActualizarListaAmigos();
             controlUsuarioAmigosSolicitudPendientePrincipal1.BringToFront();
             controlUsuarioAmigosSolicitudPendientePrincipal1.flowLayoutPanelEnviadas.Controls.Clear();
             controlUsuarioAmigosSolicitudPendientePrincipal1.flowLayoutPanelPendientes.Controls.Clear();
@@ -67,7 +70,41 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 
         public void ActualizarListaAmigos()
         {
+            try
+            {
+                PerfilServicios.PerfilServicesClient perfilServicesClient = new PerfilServicios.PerfilServicesClient();
 
+                PerfilServicios.MultipleRespuestaOfPerfilCompuestoqYdlCAL1 resultado = perfilServicesClient.ObtenerListaAmigosPerfilCompuesto(ClienteIntellectus.Views.Principal.ID);
+
+
+
+                if(!resultado.Error)
+                {
+
+                    flowLayoutPanelAmigosConectados.Controls.Clear();
+                    flowLayoutPanelAmigosDesconectados.Controls.Clear();
+                    foreach (var cliente in resultado.Entidades)
+                    {
+                        ControlUsuarioAmigosTarjetaAmigos cuata = new ControlUsuarioAmigosTarjetaAmigos();
+                        if(cliente.Perfil.Online)
+                        {
+                            flowLayoutPanelAmigosConectados.Controls.Add(cuata);
+                        }
+                        else
+                        {
+                            flowLayoutPanelAmigosDesconectados.Controls.Add(cuata);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(resultado.Errores["Error"]);
+                }
+            }
+            catch(Exception es)
+            {
+                MessageBox.Show(es.Message);
+            }
         }
     }
 }
