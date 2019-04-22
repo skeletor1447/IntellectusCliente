@@ -34,11 +34,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnDesconectadosExpandir = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelAmigosConectados = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnConectadosExpandir = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,10 +53,10 @@
             this.panelAmigosListaAmigos.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesconectadosExpandir)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConectadosExpandir)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelAmigosPrincipalMenu.SuspendLayout();
             this.panelAmigosLibre.SuspendLayout();
@@ -106,23 +106,24 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.btnDesconectadosExpandir);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(30, 29);
             this.panel5.TabIndex = 0;
             // 
-            // pictureBox3
+            // btnDesconectadosExpandir
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.btnDesconectadosExpandir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDesconectadosExpandir.Image = ((System.Drawing.Image)(resources.GetObject("btnDesconectadosExpandir.Image")));
+            this.btnDesconectadosExpandir.Location = new System.Drawing.Point(0, 0);
+            this.btnDesconectadosExpandir.Name = "btnDesconectadosExpandir";
+            this.btnDesconectadosExpandir.Size = new System.Drawing.Size(30, 29);
+            this.btnDesconectadosExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDesconectadosExpandir.TabIndex = 0;
+            this.btnDesconectadosExpandir.TabStop = false;
+            this.btnDesconectadosExpandir.Click += new System.EventHandler(this.btnDesconectadosExpandir_Click);
             // 
             // flowLayoutPanelAmigosConectados
             // 
@@ -145,23 +146,24 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.btnConectadosExpandir);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(30, 29);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox2
+            // btnConectadosExpandir
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.btnConectadosExpandir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnConectadosExpandir.Image = ((System.Drawing.Image)(resources.GetObject("btnConectadosExpandir.Image")));
+            this.btnConectadosExpandir.Location = new System.Drawing.Point(0, 0);
+            this.btnConectadosExpandir.Name = "btnConectadosExpandir";
+            this.btnConectadosExpandir.Size = new System.Drawing.Size(30, 29);
+            this.btnConectadosExpandir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnConectadosExpandir.TabIndex = 0;
+            this.btnConectadosExpandir.TabStop = false;
+            this.btnConectadosExpandir.Click += new System.EventHandler(this.btnConectadosExpandir_Click);
             // 
             // label2
             // 
@@ -282,11 +284,11 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDesconectadosExpandir)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConectadosExpandir)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelAmigosPrincipalMenu.ResumeLayout(false);
             this.panelAmigosLibre.ResumeLayout(false);
@@ -315,7 +317,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAmigosDesconectados;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnDesconectadosExpandir;
+        private System.Windows.Forms.PictureBox btnConectadosExpandir;
     }
 }

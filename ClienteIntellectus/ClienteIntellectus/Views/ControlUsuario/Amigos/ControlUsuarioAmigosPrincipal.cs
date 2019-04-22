@@ -106,5 +106,40 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 MessageBox.Show(es.Message);
             }
         }
+
+        bool ExpandidoConectado = true;
+        private void btnConectadosExpandir_Click(object sender, EventArgs e)
+        {
+            if (ExpandidoConectado)
+            {
+                btnConectadosExpandir.Image = Properties.Resources.mas;
+
+                flowLayoutPanelAmigosConectados.Hide();
+                ExpandidoConectado = false;
+            }
+            else
+            {
+                btnConectadosExpandir.Image = Properties.Resources.menos;
+                flowLayoutPanelAmigosConectados.Show();
+                ExpandidoConectado = true;
+            }
+        }
+        bool ExpandidoDesconectado = true;
+        private void btnDesconectadosExpandir_Click(object sender, EventArgs e)
+        {
+            if (ExpandidoDesconectado)
+            {
+                btnDesconectadosExpandir.Image = Properties.Resources.mas;
+
+                flowLayoutPanelAmigosDesconectados.Hide();
+                ExpandidoDesconectado = false;
+            }
+            else
+            {
+                btnDesconectadosExpandir.Image = Properties.Resources.menos;
+                flowLayoutPanelAmigosDesconectados.Show();
+                ExpandidoDesconectado = true;
+            }
+        }
     }
 }
