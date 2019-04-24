@@ -49,23 +49,22 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                         controlUsuarioAmigosSolicitudPendientePrincipal1.flowLayoutPanelEnviadas.Controls.Add(cuats);
                     }
 
-                    foreach (var recibida in _respuesta.Entidades.Where(x => x.EsSolicitante == false && x.SolicitudAmistad.Estado != "Amigos").ToList())
-                    {
+                   foreach (var recibida in _respuesta.Entidades.Where(x => x.EsSolicitante == false && x.SolicitudAmistad.Estado != "Amigos").ToList())
+                   {
                         ControlUsuarioAmigosTarjetaSolicitud cuats = new ControlUsuarioAmigosTarjetaSolicitud(recibida, this);
                         controlUsuarioAmigosSolicitudPendientePrincipal1.flowLayoutPanelPendientes.Controls.Add(cuats);
-                    }
+                   }
                 }
                 else
                 {
+                    Console.WriteLine("Hubo error en el servidor");
                     MessageBox.Show(_respuesta.Errores["Error"]);
                 }
-
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               MessageBox.Show(ex.Message + " " + ex.InnerException);
             }
-
         }
 
         public void ActualizarListaAmigos()
@@ -107,7 +106,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             }
             catch(Exception es)
             {
-                MessageBox.Show(es.Message);
+                MessageBox.Show(es.Message+ " " + es.InnerException);
             }
         }
 

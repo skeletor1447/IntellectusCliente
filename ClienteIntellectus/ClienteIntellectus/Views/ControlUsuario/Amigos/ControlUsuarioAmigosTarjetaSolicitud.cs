@@ -19,14 +19,19 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
         public ControlUsuarioAmigosTarjetaSolicitud(UsuarioServicios.UsuarioAmistad usuarioAmistad, UserControl padre)
         {
             InitializeComponent();
+           
+            
             this.UsuarioAmistad = usuarioAmistad;
             this.labelNick.Text = usuarioAmistad.Usuario.Nick;
             this.padre = padre;
 
             Control control = padre.Parent;
-            control = control.Parent;
-            control = control.Parent;
-            control = control.Parent;
+            while (!control.Name.Equals("Principal"))
+            {
+                control = control.Parent;
+            }
+
+            Console.WriteLine(control.Name);
 
             try
             {
