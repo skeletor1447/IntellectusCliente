@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 {
     public partial class ControlUsuarioAmigosTarjetaAmigos : UserControl
     {
-        public ControlUsuarioAmigosTarjetaAmigos()
+        PerfilServicios.PerfilCompuesto perfil;
+        public ControlUsuarioAmigosTarjetaAmigos(PerfilServicios.PerfilCompuesto perfil)
         {
             InitializeComponent();
+            this.perfil = perfil;
+
+            labelNick.Text = perfil.Usuario.Nick;
+            labelDisponible.Text = perfil.Perfil.Disponibilidad;
+
+            using (var ms = new MemoryStream(perfil.Perfil.Avatar))
+            {
+                pictureAvatar.Image = Image.FromStream(ms);
+            }
         }
     }
 }

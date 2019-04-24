@@ -29,51 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlUsuarioAmigosTarjetaAmigos));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.labelNick = new System.Windows.Forms.Label();
+            this.labelDisponible = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pictureAvatar.Image")));
+            this.pictureAvatar.Location = new System.Drawing.Point(3, 6);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(54, 42);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 0;
+            this.pictureAvatar.TabStop = false;
             // 
-            // label1
+            // labelNick
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "nick";
+            this.labelNick.AutoSize = true;
+            this.labelNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNick.Location = new System.Drawing.Point(64, 6);
+            this.labelNick.Name = "labelNick";
+            this.labelNick.Size = new System.Drawing.Size(32, 16);
+            this.labelNick.TabIndex = 1;
+            this.labelNick.Text = "nick";
             // 
-            // label2
+            // labelDisponible
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Disponible";
+            this.labelDisponible.AutoSize = true;
+            this.labelDisponible.Location = new System.Drawing.Point(65, 30);
+            this.labelDisponible.Name = "labelDisponible";
+            this.labelDisponible.Size = new System.Drawing.Size(56, 13);
+            this.labelDisponible.TabIndex = 2;
+            this.labelDisponible.Text = "Disponible";
             // 
             // ControlUsuarioAmigosTarjetaAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.labelDisponible);
+            this.Controls.Add(this.labelNick);
+            this.Controls.Add(this.pictureAvatar);
             this.Name = "ControlUsuarioAmigosTarjetaAmigos";
             this.Size = new System.Drawing.Size(247, 53);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,8 +81,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureAvatar;
+        private System.Windows.Forms.Label labelNick;
+        private System.Windows.Forms.Label labelDisponible;
     }
 }

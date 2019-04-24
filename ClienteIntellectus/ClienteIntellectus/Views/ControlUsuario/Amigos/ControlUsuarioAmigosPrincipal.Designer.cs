@@ -32,14 +32,14 @@
             this.panelAmigosListaAmigos = new System.Windows.Forms.Panel();
             this.flowLayoutPanelAmigosDesconectados = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelAmigosDesconectados = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDesconectadosExpandir = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelAmigosConectados = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnConectadosExpandir = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelAmigosConectados = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAmigosPrincipalMenu = new System.Windows.Forms.Panel();
@@ -87,7 +87,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.labelAmigosDesconectados);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 441);
@@ -95,14 +95,14 @@
             this.panel4.Size = new System.Drawing.Size(255, 29);
             this.panel4.TabIndex = 4;
             // 
-            // label3
+            // labelAmigosDesconectados
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Amigos desconectados (1)";
+            this.labelAmigosDesconectados.AutoSize = true;
+            this.labelAmigosDesconectados.Location = new System.Drawing.Point(36, 7);
+            this.labelAmigosDesconectados.Name = "labelAmigosDesconectados";
+            this.labelAmigosDesconectados.Size = new System.Drawing.Size(132, 13);
+            this.labelAmigosDesconectados.TabIndex = 1;
+            this.labelAmigosDesconectados.Text = "Amigos desconectados (1)";
             // 
             // panel5
             // 
@@ -137,7 +137,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.labelAmigosConectados);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
@@ -165,15 +165,15 @@
             this.btnConectadosExpandir.TabStop = false;
             this.btnConectadosExpandir.Click += new System.EventHandler(this.btnConectadosExpandir_Click);
             // 
-            // label2
+            // labelAmigosConectados
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Amigos conectados (1)";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelAmigosConectados.AutoSize = true;
+            this.labelAmigosConectados.Location = new System.Drawing.Point(36, 8);
+            this.labelAmigosConectados.Name = "labelAmigosConectados";
+            this.labelAmigosConectados.Size = new System.Drawing.Size(115, 13);
+            this.labelAmigosConectados.TabIndex = 0;
+            this.labelAmigosConectados.Text = "Amigos conectados (1)";
+            this.labelAmigosConectados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -308,12 +308,12 @@
         private AgregarAmigos.ControlUsuarioAmigosAgregarAmigosPrincipal controlUsuarioAmigosAgregarAmigosPrincipal1;
         private SolicitudPendiente.ControlUsuarioAmigosSolicitudPendientePrincipal controlUsuarioAmigosSolicitudPendientePrincipal1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelAmigosDesconectados;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAmigosConectados;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelAmigosConectados;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAmigosDesconectados;

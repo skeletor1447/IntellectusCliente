@@ -74,7 +74,7 @@ namespace ClienteIntellectus.Presentador
             using (Graphics g = principal.CreateGraphics())
             {
                 SizeF size = g.MeasureString(label.Text, label.Font, int.MaxValue);
-                label.Width = (int)Math.Ceiling(size.Width);
+                label.Width = (int)Math.Ceiling(size.Width+5);
                 label.Text = label.Text;
             }
         }

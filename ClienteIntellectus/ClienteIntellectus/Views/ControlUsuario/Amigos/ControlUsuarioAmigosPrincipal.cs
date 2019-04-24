@@ -85,7 +85,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                     flowLayoutPanelAmigosDesconectados.Controls.Clear();
                     foreach (var cliente in resultado.Entidades)
                     {
-                        ControlUsuarioAmigosTarjetaAmigos cuata = new ControlUsuarioAmigosTarjetaAmigos();
+                        ControlUsuarioAmigosTarjetaAmigos cuata = new ControlUsuarioAmigosTarjetaAmigos(cliente);
                         if(cliente.Perfil.Online)
                         {
                             flowLayoutPanelAmigosConectados.Controls.Add(cuata);
@@ -95,6 +95,10 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                             flowLayoutPanelAmigosDesconectados.Controls.Add(cuata);
                         }
                     }
+
+                    labelAmigosConectados.Text = "Amigos conectados(" + flowLayoutPanelAmigosConectados.Controls.Count + ")";
+                    labelAmigosDesconectados.Text = "Amigos conectados(" + flowLayoutPanelAmigosDesconectados.Controls.Count + ")";
+
                 }
                 else
                 {
