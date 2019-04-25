@@ -147,3 +147,5 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.InformacionPersonal.ControlUsuarioPerfilInformacionPersonal.resources
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.ActualizarAvatar.resources
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.ControlUsuarioAmigosTarjetaAmigos.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.ControlUsuarioPerfilPerfilPublicoResumen.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.PerfilPublico.resources
