@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlUsuarioAmigosTarjetaAmigos));
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.labelNick = new System.Windows.Forms.Label();
             this.labelDisponible = new System.Windows.Forms.Label();
+            this.contextMenuTarjetaAmigo = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarMensajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarAmigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bloquearAmigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
+            this.contextMenuTarjetaAmigo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureAvatar
@@ -64,16 +71,52 @@
             this.labelDisponible.TabIndex = 2;
             this.labelDisponible.Text = "Disponible";
             // 
+            // contextMenuTarjetaAmigo
+            // 
+            this.contextMenuTarjetaAmigo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verPerfilToolStripMenuItem,
+            this.enviarMensajeToolStripMenuItem,
+            this.eliminarAmigoToolStripMenuItem,
+            this.bloquearAmigoToolStripMenuItem});
+            this.contextMenuTarjetaAmigo.Name = "contextMenuTarjetaAmigo";
+            this.contextMenuTarjetaAmigo.Size = new System.Drawing.Size(159, 92);
+            // 
+            // verPerfilToolStripMenuItem
+            // 
+            this.verPerfilToolStripMenuItem.Name = "verPerfilToolStripMenuItem";
+            this.verPerfilToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.verPerfilToolStripMenuItem.Text = "Ver perfil";
+            // 
+            // enviarMensajeToolStripMenuItem
+            // 
+            this.enviarMensajeToolStripMenuItem.Name = "enviarMensajeToolStripMenuItem";
+            this.enviarMensajeToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.enviarMensajeToolStripMenuItem.Text = "Enviar mensaje";
+            // 
+            // eliminarAmigoToolStripMenuItem
+            // 
+            this.eliminarAmigoToolStripMenuItem.Name = "eliminarAmigoToolStripMenuItem";
+            this.eliminarAmigoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.eliminarAmigoToolStripMenuItem.Text = "Eliminar amigo";
+            // 
+            // bloquearAmigoToolStripMenuItem
+            // 
+            this.bloquearAmigoToolStripMenuItem.Name = "bloquearAmigoToolStripMenuItem";
+            this.bloquearAmigoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.bloquearAmigoToolStripMenuItem.Text = "Bloquear amigo";
+            // 
             // ControlUsuarioAmigosTarjetaAmigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ContextMenuStrip = this.contextMenuTarjetaAmigo;
             this.Controls.Add(this.labelDisponible);
             this.Controls.Add(this.labelNick);
             this.Controls.Add(this.pictureAvatar);
             this.Name = "ControlUsuarioAmigosTarjetaAmigos";
             this.Size = new System.Drawing.Size(247, 53);
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
+            this.contextMenuTarjetaAmigo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +127,10 @@
         private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.Label labelNick;
         private System.Windows.Forms.Label labelDisponible;
+        private System.Windows.Forms.ContextMenuStrip contextMenuTarjetaAmigo;
+        private System.Windows.Forms.ToolStripMenuItem verPerfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enviarMensajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarAmigoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bloquearAmigoToolStripMenuItem;
     }
 }
