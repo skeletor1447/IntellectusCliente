@@ -28,71 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.labelNick = new System.Windows.Forms.Label();
+            this.labelDescripcion = new System.Windows.Forms.Label();
+            this.labelInstitucion = new System.Windows.Forms.Label();
+            this.labelNombreReal = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureAvatar
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(27, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 133);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureAvatar.Location = new System.Drawing.Point(27, 19);
+            this.pictureAvatar.Name = "pictureAvatar";
+            this.pictureAvatar.Size = new System.Drawing.Size(146, 133);
+            this.pictureAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureAvatar.TabIndex = 0;
+            this.pictureAvatar.TabStop = false;
             // 
-            // label1
+            // labelNick
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.labelNick.AutoSize = true;
+            this.labelNick.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNick.Location = new System.Drawing.Point(180, 19);
+            this.labelNick.Name = "labelNick";
+            this.labelNick.Size = new System.Drawing.Size(70, 25);
+            this.labelNick.TabIndex = 1;
+            this.labelNick.Text = "label1";
             // 
-            // label2
+            // labelDescripcion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Descripción";
+            this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.Location = new System.Drawing.Point(185, 71);
+            this.labelDescripcion.Name = "labelDescripcion";
+            this.labelDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.labelDescripcion.TabIndex = 2;
+            this.labelDescripcion.Text = "Descripción";
             // 
-            // label3
+            // labelInstitucion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Institución";
+            this.labelInstitucion.AutoSize = true;
+            this.labelInstitucion.Location = new System.Drawing.Point(185, 113);
+            this.labelInstitucion.Name = "labelInstitucion";
+            this.labelInstitucion.Size = new System.Drawing.Size(55, 13);
+            this.labelInstitucion.TabIndex = 3;
+            this.labelInstitucion.Text = "Institución";
             // 
-            // label4
+            // labelNombreReal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 193);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre real:";
+            this.labelNombreReal.AutoSize = true;
+            this.labelNombreReal.Location = new System.Drawing.Point(28, 193);
+            this.labelNombreReal.Name = "labelNombreReal";
+            this.labelNombreReal.Size = new System.Drawing.Size(67, 13);
+            this.labelNombreReal.TabIndex = 4;
+            this.labelNombreReal.Text = "Nombre real:";
             // 
             // ControlUsuarioPerfilPerfilPublicoResumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.labelNombreReal);
+            this.Controls.Add(this.labelInstitucion);
+            this.Controls.Add(this.labelDescripcion);
+            this.Controls.Add(this.labelNick);
+            this.Controls.Add(this.pictureAvatar);
             this.Name = "ControlUsuarioPerfilPerfilPublicoResumen";
             this.Size = new System.Drawing.Size(560, 540);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,10 +101,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.PictureBox pictureAvatar;
+        public System.Windows.Forms.Label labelNick;
+        public System.Windows.Forms.Label labelDescripcion;
+        public System.Windows.Forms.Label labelInstitucion;
+        public System.Windows.Forms.Label labelNombreReal;
     }
 }

@@ -55,7 +55,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             }
             catch(Exception es)
             {
-                MessageBox.Show("Error de imagen");
+                MessageBox.Show("Error de imagen "+es.Message);
             }
 
             if(usuarioAmistad.SolicitudAmistad != null)

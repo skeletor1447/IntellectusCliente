@@ -27,5 +27,12 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
                 pictureAvatar.Image = Image.FromStream(ms);
             }
         }
+
+        private void menuVerPerfil_Click(object sender, EventArgs e)
+        {
+            Perfil.PerfilPublico perfilPublico = new Perfil.PerfilPublico(perfil);
+
+            perfilPublico.ShowDialog();
+        }
     }
 }
