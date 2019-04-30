@@ -132,6 +132,12 @@
     <Compile Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatTarjetaMensajeCuerpo.Designer.cs">
       <DependentUpon>ControlUsuarioAmigosChatTarjetaMensajeCuerpo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatTarjetaMensajeDateTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatTarjetaMensajeDateTime.Designer.cs">
+      <DependentUpon>ControlUsuarioAmigosChatTarjetaMensajeDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatTarjetaMensajeCuerpo.resx">
       <DependentUpon>ControlUsuarioAmigosChatTarjetaMensajeCuerpo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ControlUsuario\Amigos\Chat\ControlUsuarioAmigosChatTarjetaMensajeDateTime.resx">
+      <DependentUpon>ControlUsuarioAmigosChatTarjetaMensajeDateTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ControlUsuario\Amigos\ControlUsuarioAmigosPrincipal.resx">
       <DependentUpon>ControlUsuarioAmigosPrincipal.cs</DependentUpon>

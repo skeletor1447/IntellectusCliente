@@ -150,3 +150,4 @@ C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteInt
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.ControlUsuarioPerfilPerfilPublicoResumen.resources
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Perfil.PerfilPublico.resources
 C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatTarjetaMensajeCuerpo.resources
+C:\Users\JesúsEmilio\Documents\IntellectusCliente\ClienteIntellectus\ClienteIntellectus\obj\Debug\ClienteIntellectus.Views.ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatTarjetaMensajeDateTime.resources
