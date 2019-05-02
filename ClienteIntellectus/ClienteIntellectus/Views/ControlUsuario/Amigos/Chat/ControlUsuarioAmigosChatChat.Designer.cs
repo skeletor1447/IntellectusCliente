@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelEnviarMensaje = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelConversacionesAbiertas = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanelChat = new System.Windows.Forms.FlowLayoutPanel();
             this.panelEnviarMensaje.SuspendLayout();
@@ -46,13 +46,6 @@
             this.panelEnviarMensaje.Size = new System.Drawing.Size(569, 37);
             this.panelEnviarMensaje.TabIndex = 1;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(455, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // btnEnviar
             // 
             this.btnEnviar.Dock = System.Windows.Forms.DockStyle.Right;
@@ -63,20 +56,27 @@
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(455, 20);
+            this.textBox1.TabIndex = 0;
+            // 
             // flowLayoutPanelConversacionesAbiertas
             // 
             this.flowLayoutPanelConversacionesAbiertas.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanelConversacionesAbiertas.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelConversacionesAbiertas.Name = "flowLayoutPanelConversacionesAbiertas";
-            this.flowLayoutPanelConversacionesAbiertas.Size = new System.Drawing.Size(569, 35);
+            this.flowLayoutPanelConversacionesAbiertas.Size = new System.Drawing.Size(569, 42);
             this.flowLayoutPanelConversacionesAbiertas.TabIndex = 2;
             // 
             // flowLayoutPanelChat
             // 
             this.flowLayoutPanelChat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelChat.Location = new System.Drawing.Point(0, 35);
+            this.flowLayoutPanelChat.Location = new System.Drawing.Point(0, 42);
             this.flowLayoutPanelChat.Name = "flowLayoutPanelChat";
-            this.flowLayoutPanelChat.Size = new System.Drawing.Size(569, 333);
+            this.flowLayoutPanelChat.Size = new System.Drawing.Size(569, 326);
             this.flowLayoutPanelChat.TabIndex = 3;
             // 
             // ControlUsuarioAmigosChatChat
@@ -98,7 +98,7 @@
         private System.Windows.Forms.Panel panelEnviarMensaje;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelConversacionesAbiertas;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelChat;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelConversacionesAbiertas;
     }
 }

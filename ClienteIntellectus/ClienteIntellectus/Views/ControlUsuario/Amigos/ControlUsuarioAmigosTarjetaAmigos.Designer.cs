@@ -35,7 +35,7 @@
             this.labelDisponible = new System.Windows.Forms.Label();
             this.contextMenuTarjetaAmigo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuVerPerfil = new System.Windows.Forms.ToolStripMenuItem();
-            this.enviarMensajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEnviarMensaje = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarAmigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bloquearAmigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
@@ -75,7 +75,7 @@
             // 
             this.contextMenuTarjetaAmigo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuVerPerfil,
-            this.enviarMensajeToolStripMenuItem,
+            this.menuEnviarMensaje,
             this.eliminarAmigoToolStripMenuItem,
             this.bloquearAmigoToolStripMenuItem});
             this.contextMenuTarjetaAmigo.Name = "contextMenuTarjetaAmigo";
@@ -88,11 +88,12 @@
             this.menuVerPerfil.Text = "Ver perfil";
             this.menuVerPerfil.Click += new System.EventHandler(this.menuVerPerfil_Click);
             // 
-            // enviarMensajeToolStripMenuItem
+            // menuEnviarMensaje
             // 
-            this.enviarMensajeToolStripMenuItem.Name = "enviarMensajeToolStripMenuItem";
-            this.enviarMensajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.enviarMensajeToolStripMenuItem.Text = "Enviar mensaje";
+            this.menuEnviarMensaje.Name = "menuEnviarMensaje";
+            this.menuEnviarMensaje.Size = new System.Drawing.Size(180, 22);
+            this.menuEnviarMensaje.Text = "Enviar mensaje";
+            this.menuEnviarMensaje.Click += new System.EventHandler(this.menuEnviarMensaje_Click);
             // 
             // eliminarAmigoToolStripMenuItem
             // 
@@ -130,7 +131,7 @@
         private System.Windows.Forms.Label labelDisponible;
         private System.Windows.Forms.ContextMenuStrip contextMenuTarjetaAmigo;
         private System.Windows.Forms.ToolStripMenuItem menuVerPerfil;
-        private System.Windows.Forms.ToolStripMenuItem enviarMensajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuEnviarMensaje;
         private System.Windows.Forms.ToolStripMenuItem eliminarAmigoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bloquearAmigoToolStripMenuItem;
     }
