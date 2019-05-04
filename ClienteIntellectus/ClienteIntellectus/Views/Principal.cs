@@ -22,6 +22,8 @@ namespace ClienteIntellectus.Views
         public long IdCliente { get; set; }
         static public PerfilCompuesto Perfil { get; set ; }
 
+        public static Dictionary<long, List<Control>> flujoChat = new Dictionary<long, List<Control>>();
+
         Presentador.PrincipalPresentador PrincipalPresentador;
 
         public Principal(Socket clienteSocket,long ID)
