@@ -34,7 +34,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 
             perfilPublico.ShowDialog();
         }
-
+        
         private void menuEnviarMensaje_Click(object sender, EventArgs e)
         {
             Control control = this.Parent;
@@ -45,8 +45,10 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
             if((control is ControlUsuarioAmigosPrincipal))
             {
                 (control as ControlUsuarioAmigosPrincipal).controlUsuarioAmigosChatChat1.flowLayoutPanelConversacionesAbiertas.Controls.Add(new ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatTarjetaPestana());
+                ClienteIntellectus.Views.Principal.flujoChat.Add(perfil.Usuario.ID, new List<Control>());
             }
-            Console.WriteLine(control.Name);
+           
+
         }
     }
 }
