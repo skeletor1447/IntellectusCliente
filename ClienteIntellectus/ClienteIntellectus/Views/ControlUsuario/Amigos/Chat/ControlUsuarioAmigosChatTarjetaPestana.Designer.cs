@@ -72,6 +72,7 @@
             this.Controls.Add(this.pictureAvatar);
             this.Name = "ControlUsuarioAmigosChatTarjetaPestana";
             this.Size = new System.Drawing.Size(136, 40);
+            this.Click += new System.EventHandler(this.ControlUsuarioAmigosChatTarjetaPestana_Click);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.ResumeLayout(false);

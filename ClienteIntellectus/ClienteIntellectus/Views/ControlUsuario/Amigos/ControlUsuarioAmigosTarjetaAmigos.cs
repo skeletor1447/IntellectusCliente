@@ -44,7 +44,7 @@ namespace ClienteIntellectus.Views.ControlUsuario.Amigos
 
             if((control is ControlUsuarioAmigosPrincipal))
             {
-                (control as ControlUsuarioAmigosPrincipal).controlUsuarioAmigosChatChat1.flowLayoutPanelConversacionesAbiertas.Controls.Add(new ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatTarjetaPestana());
+                (control as ControlUsuarioAmigosPrincipal).controlUsuarioAmigosChatChat1.flowLayoutPanelConversacionesAbiertas.Controls.Add(new ControlUsuario.Amigos.Chat.ControlUsuarioAmigosChatTarjetaPestana(perfil));
                 ClienteIntellectus.Views.Principal.flujoChat.Add(perfil.Usuario.ID, new List<Control>());
             }
            
