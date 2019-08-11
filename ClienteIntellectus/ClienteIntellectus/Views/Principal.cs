@@ -89,5 +89,10 @@ namespace ClienteIntellectus.Views
         {
             Application.Exit();
         }
+
+        private void btnAplicaciones_Click(object sender, EventArgs e)
+        {
+            controlUsuarioAplicacionesPrincipal1.BringToFront();
+        }
     }
 }

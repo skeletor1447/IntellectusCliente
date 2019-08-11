@@ -65,7 +65,13 @@ namespace ClienteIntellectus.Views
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             padre.Show();
+        }
+
+        private void txtCorreo_Validated(object sender, EventArgs e)
+        {
+           
         }
     }
 }

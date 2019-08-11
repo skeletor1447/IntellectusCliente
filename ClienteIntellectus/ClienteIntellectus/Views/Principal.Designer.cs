@@ -46,6 +46,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAplicaciones = new System.Windows.Forms.Button();
             this.btnAmigos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.panelPrincipalContenido = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuPerfilCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPerfilSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlUsuarioAplicacionesPrincipal1 = new ClienteIntellectus.Views.ControlUsuario.Aplicaciones.ControlUsuarioAplicacionesPrincipal();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -222,6 +224,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnAplicaciones);
             this.panel4.Controls.Add(this.btnAmigos);
             this.panel4.Controls.Add(this.btnPrincipal);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -229,6 +232,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 439);
             this.panel4.TabIndex = 3;
+            // 
+            // btnAplicaciones
+            // 
+            this.btnAplicaciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAplicaciones.Location = new System.Drawing.Point(0, 92);
+            this.btnAplicaciones.Name = "btnAplicaciones";
+            this.btnAplicaciones.Size = new System.Drawing.Size(200, 46);
+            this.btnAplicaciones.TabIndex = 2;
+            this.btnAplicaciones.Text = "Aplicaciones";
+            this.btnAplicaciones.UseVisualStyleBackColor = true;
+            this.btnAplicaciones.Click += new System.EventHandler(this.btnAplicaciones_Click);
             // 
             // btnAmigos
             // 
@@ -254,6 +268,7 @@
             // 
             // panelPrincipalContenido
             // 
+            this.panelPrincipalContenido.Controls.Add(this.controlUsuarioAplicacionesPrincipal1);
             this.panelPrincipalContenido.Controls.Add(this.controlUsuarioPerfilPrincipal1);
             this.panelPrincipalContenido.Controls.Add(this.controlUsuarioPrincipalPrincipal1);
             this.panelPrincipalContenido.Controls.Add(this.controlUsuarioAmigosPrincipal1);
@@ -328,6 +343,14 @@
             this.menuPerfilSalir.Text = "Salir";
             this.menuPerfilSalir.Click += new System.EventHandler(this.menuPerfilSalir_Click);
             // 
+            // controlUsuarioAplicacionesPrincipal1
+            // 
+            this.controlUsuarioAplicacionesPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlUsuarioAplicacionesPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.controlUsuarioAplicacionesPrincipal1.Name = "controlUsuarioAplicacionesPrincipal1";
+            this.controlUsuarioAplicacionesPrincipal1.Size = new System.Drawing.Size(764, 439);
+            this.controlUsuarioAplicacionesPrincipal1.TabIndex = 3;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,5 +413,7 @@
         public System.Windows.Forms.Label labelPerfil;
         public System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.ToolStripMenuItem menuPerfilSalir;
+        private System.Windows.Forms.Button btnAplicaciones;
+        private ControlUsuario.Aplicaciones.ControlUsuarioAplicacionesPrincipal controlUsuarioAplicacionesPrincipal1;
     }
 }
